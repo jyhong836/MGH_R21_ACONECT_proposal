@@ -8,12 +8,36 @@
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{setspace}
-\usepackage[numbers,sort&compress]{natbib}  % For citations
+\usepackage[numbers,sort&compress,super]{natbib}  % For citations
 \usepackage{soul}  % For underlining with \ul
 \usepackage{amssymb}  % For mathematical symbols including \geq and \leq
+\usepackage{titlesec}  % For customizing section formatting
 
 % Set font to Arial (Helvetica)
 \renewcommand{\familydefault}{\sfdefault}
+
+% Change section numbering to A, B, C, etc. and make titles uppercase
+\renewcommand{\thesection}{\Alph{section}.}
+\titleformat{\section}{\normalfont\bfseries}{\thesection}{1em}{\MakeUppercase}
+
+% Customize title formatting
+\makeatletter
+\renewcommand{\@maketitle}{%
+  \newpage
+  \null
+  \vfill
+  \begin{center}%
+    {\fontsize{20pt}{24pt}\selectfont\bfseries \@title \par}%
+  \end{center}%
+  \vfill
+}
+\makeatother
+
+% Reduce spacing after title
+\titlespacing*{\section}{0pt}{0.5em}{0.3em}
+
+% Remove paragraph indentation
+\setlength{\parindent}{0pt}
 
 % Set line spacing
 \setstretch{1.15}
@@ -26,6 +50,8 @@
 \begin{document}
 
 \maketitle
+
+\clearpage
 
 \textbf{Specific Aims}
 
@@ -117,7 +143,7 @@ alternatives to traditional human-led interventions. If feasible and
 successful, it will greatly increase the accessibility of early dementia
 intervention for socially isolated older adults.
 
-\textbf{A. Significance}
+\section{Significance}
 
 \textbf{Alzheimer's Disease and related dementias (AD/RD) are difficult
 to treat.} Although the FDA has approved several drugs to treat AD,
@@ -189,10 +215,9 @@ AD/RD-oriented chatbot can greatly improve the accessibility of early
 dementia prevention for socially isolated older adults in terms of
 accessibility and cost.
 
-\textbf{B. INNOVATION}
+\section{INNOVATION}
 
-\textbf{B1. Therapy-aware AI chatbot for engaging conversational
-intervention}. We propose to develop the cost-effective AI-based
+\textbf{Therapy-aware AI chatbot for engaging conversational intervention.} We propose to develop the cost-effective AI-based
 conversational intervention when a human-based one has been proven
 helpful for dementia prevention \cite{dodge2024internet}, but could be too costly in
 practice. The AI chatbot will be trained to implement the I-CONECT
@@ -200,8 +225,7 @@ protocol, delivering reminiscence therapy and vocabulary enhancement,
 methods that benefit cognitive functions. In addition, the chatbot will
 be optimized to align the I-CONECT interviewers' communication skills.
 
-\textbf{B2. Cost-effective development via data-driven simulation}.
-Iterating the design is costly due to getting feedback from human-based
+\textbf{Cost-effective development via data-driven simulation.} Iterating the design is costly due to getting feedback from human-based
 evaluation. Our method simplifies the process by building virtual users
 that simulate the language conversations in iterations with tested
 chatbots. Using the virtual users, we establish a benchmark with novel
@@ -209,8 +233,7 @@ metrics to justify whether the chatbot can effectively engage older
 adults. The benchmark can be used to guide further chatbot design for
 older adults.
 
-\textbf{B3. User-friendly multi-modality interface minimizing the
-technology barrier for older adults}. Because older adults could be
+\textbf{User-friendly multi-modality interface minimizing the technology barrier for older adults.} Because older adults could be
 unfamiliar with the emergent AI technology, they will be less willing to
 engage with the AI interview, thereby reducing the effects of AI-based
 intervention. Our interface is a software pre-installed on a mobile
@@ -221,11 +244,9 @@ affective interactions. We will use a small AI model to synchronize the
 voice, facial, and language interactions to provide human-like
 experiences.
 
-\textbf{C. Approach}
+\section{Approach}
 
-\textbf{C.1 Intervention Approach}
-
-The recent research, an Internet-based conversational engagement
+\textbf{Intervention Approach.} The recent research, an Internet-based conversational engagement
 randomized controlled clinical trial (I-CONECT), evidenced that
 stimulating frequent social interactions with trained interviewers via
 the Internet/webcam could improve global cognitive functions and
@@ -255,9 +276,7 @@ provide cognitive benefits through interactive and engaging
 conversations tailored to the needs and capabilities of socially
 isolated older adults.
 
-\textbf{C.2} \textbf{Development Approach}
-
-The key challenge is to implement the intervention strategies that have
+\textbf{Development Approach.} The key challenge is to implement the intervention strategies that have
 been practiced in the I-CONECT trial. A system customizing AI and
 validating compliance is essential before being used by humans. Thus,
 our main technology includes three folds. All development or deployments
@@ -326,9 +345,7 @@ will stick to the principles of intervention strategies to provide novel
 chat experiences and visual stimulations (through external visual
 tools).
 
-\textbf{C.3 Approach for Feasibility Study}
-
-We will test the chatbot on the stakeholders at the AITC and our
+\textbf{Approach for Feasibility Study.} We will test the chatbot on the stakeholders at the AITC and our
 performance sites to get a feasibility survey that can guide the
 improvement of the chatbot design. About 20 recruited older human
 participants (age $\geq 75$) will be recruited to complete
@@ -394,7 +411,7 @@ Exclusion criteria:
   stable dosing for 2 months).
 \end{enumerate}
 
-\textbf{D. DATA PROCESSING AND ANALYSES}
+\section{DATA PROCESSING AND ANALYSES}
 
 \textbf{Aim 1}: We will use I-CONECT recorded conversations to evaluate
 and optimize the chatbot design for better implementation of the
@@ -531,7 +548,9 @@ satisfaction, while remaining consistent with the exploratory and
 developmental intent of the mechanism and the ``clinical trial not
 allowed'' designation.
 
-\textbf{E. POTENTIAL RISKS AND ALTERNATIVE STRATEGIES.} The project
+\section{POTENTIAL RISKS AND ALTERNATIVE STRATEGIES}
+
+The project
 faces four main risks with corresponding alternative strategies:
 \textbf{Risk 1} concerns the insufficient quality of I-CONECT audio data
 for ASR and LLM fine-tuning, which will be mitigated by employing
@@ -555,7 +574,9 @@ adjustments based on human feedback on empathy and stimulation, and
 potentially exploring a human-in-the-loop hybrid approach in future work
 if AI-only engagement proves insufficient.
 
-\textbf{F. IMPACT.} Our team is highly interdisciplinary, comprising a
+\section{IMPACT}
+
+Our team is highly interdisciplinary, comprising a
 statistician, a neurologist, and multiple computer scientists in trial
 design/analytics, all with extensive experience in AD research. This R21
 is especially timely, addressing the growing demand for complementary
@@ -563,6 +584,7 @@ alternatives to traditional human-led interventions. If feasible and
 successful, it will greatly increase the accessibility of early dementia
 intervention for socially isolated older adults.
 
+\clearpage
 \bibliographystyle{unsrtnat}
 \bibliography{references}
 
