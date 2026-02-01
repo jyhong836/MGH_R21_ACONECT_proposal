@@ -177,32 +177,25 @@ exploitation, or emotional distress) during home use.
 
 \section{INNOVATION}
 
-\textbf{Therapy-aware AI chatbot for conversational intervention.} We propose to develop the cost-effective AI-based
-conversational intervention when a human-based one has been proven
-helpful for dementia prevention \cite{dodge2024internet}, but could be too costly in
-practice. The AI chatbot will be trained to implement the I-CONECT
-protocol, delivering reminiscence therapy and vocabulary enhancement,
-methods that benefit cognitive functions. In addition, the chatbot will
-be optimized to align the I-CONECT interviewers' communication skills.
+\textbf{Clinical Innovation: Translating human-delivered intervention to AI-based conversational system.}
+AI-CONECT is innovative in directly translating a proven, interviewer-led dementia prevention intervention into a protocol-faithful, AI-delivered system tailored for socially isolated older adults. Rather than designing a de novo chatbot, we explicitly encode and iteratively refine the established I-CONECT workflow, conversational strategies, and cognitively demanding prompts within a multimodal, safety-aware AI framework. This systematic translation enables high-fidelity automation of a complex behavioral intervention while preserving its therapeutic intent, thereby opening a new paradigm for scaling evidence-based conversational therapies.
 
-\textbf{Cost-effective development via data-driven simulation.} Iterating the design is costly due to getting feedback from human-based
-evaluation. Our method simplifies the process by building virtual users
-that simulate the language conversations in iterations with tested
-chatbots. Using the virtual users, we establish a benchmark with novel
-metrics to justify whether the chatbot can effectively engage older
-adults. The benchmark can be used to guide further chatbot design for
-older adults.
+\textbf{Technology Innovation 1: Accelerating cohort-oriented development of AI chatbots via data-driven simulation.} 
+Developing an AI chatbot for a cohort with specific needs (e.g., socially isolated older adults with mild cognitive impairment (MCI)) is limited by scarce data, high evaluation cost, and the risk of deploying immature designs. We introduce a data-driven simulation framework to model cohort-typical language and engagement behaviors and to stress-test candidate chatbot behaviors \emph{before} involving older adults. Unlike previous simulation methods\comm{cite Patient Psi}, our method is grounded in recorded I-CONECT conversations (enabling us to capture unique MCI traits) and intervention goals (e.g., engagement and reminiscence). This approach refines and extends existing chatbot development methods by adding quantitative, intervention-relevant evaluation environment that enable rapid iteration, transparent comparison across versions, and earlier identification of failure modes (e.g., low engagement or protocol drift), thereby reducing development time and risk.
 
-\textbf{User-friendly multi-modality interface minimizing the technology barrier for older adults.} Because older adults could be
-unfamiliar with the emergent AI technology, they will be less willing to
-engage with the AI interview, thereby reducing the effects of AI-based
-intervention. Our interface is a software pre-installed on a mobile
-tablet that is designed to be ready to use. The interface includes
-multi-modality interactions: voice input and output (driven by language
-modality) for conversation and generative facial expressions for
-affective interactions. We will use a small AI model to synchronize the
-voice, facial, and language interactions to provide human-like
-experiences.
+\textbf{Technology Innovation 2: User-friendly multi-modality and voice-responsive interaction enhancing engagement.}
+For socially isolated older adults with MCI, technology burden is a primary barrier to sustained engagement, particularly for systems that assume typing, app navigation, or complex setup.
+When they faces a digital device, their attention can be easily distracted.
+Using proper prompts/cues can effectively draw their attention and stimulate cognitive functions \comm{cite BCT papers}.
+We will apply and extend multimodal human--computer interaction approaches by delivering a \emph{voice-forward} system (real-time speech input/output) with simple visual, emotion-responsive feedback designed for older-adult accessibility. 
+As a novel instrumentation choice for this setting, we will deploy the intervention on a ready-to-use tablet paired with an emotion-aware social robot that provides immediate affective cues, reducing interaction complexity while supporting engagement. Compared with conventional chat interfaces, this design lowers operational demands and enables more natural conversational flow aligned with the I-CONECT interaction style.
+To draw participants' attention and stimulate users' cognitive functions, we will leverage AI to generate personalized images based on the learned personal preferences in multiple sessions, as complementary prompts/cues to I-CONECT image and lanugage prompts.
+
+
+% \textbf{Technology Innovation 2: User-friendly multi-modality and voice-responsive interface minimizing the technology barrier for older adults.}
+% \comm{Need to think the difference to voice ChatGPT.}
+% For socially isolated older adults with MCI, technology burden is a primary barrier to sustained engagement, particularly for systems that assume typing, app navigation, or complex setup. We will apply and extend multimodal human--computer interaction approaches by delivering a \emph{voice-forward} system (real-time speech input/output) with simple visual, emotion-responsive feedback designed for older-adult accessibility. As a novel instrumentation choice for this setting, we will deploy the intervention on a ready-to-use tablet paired with an emotion-aware social robot that provides immediate affective cues, reducing interaction complexity while supporting engagement. Compared with conventional chat interfaces, this design lowers operational demands and enables more natural conversational flow aligned with the I-CONECT interaction style.
+
 
 \section{Approach}
 
@@ -219,26 +212,31 @@ above) with mild cognitive impairment (MCI) \cite{dodge2024internet}. In this pr
 (AI-CONECT), we \textbf{hypothesize} that a chatbot can mimic a human
 interviewer in these interactions and follow a similar intervention
 strategy as the human interviewers did in the human-based I-CONECT
-project. Based on I-CONECT, we propose principles of intervention and
+project. Based on I-CONECT, we propose protocl of intervention and
 verify the hypothesis through two-step evaluation: scalable virtual
 testing and pilot human survey.
 
-\textbf{Principles of Intervention Strategies}. The intervention
-strategy addresses two main principles: (1)
-\emph{\ul{Cognitively-Demanding Conversation Strategies}}: This includes
-engaging users in novel chat experiences to stimulate their cognitive
-functions, which may enhance brain connectivity and resist
-neurodegeneration. Strategies of engaging includes providing visual
-information, novel chat themes and cognitively-demanding topics to
-stimulate users' cognitive activities. (2) \emph{\ul{User-Friendly
-Device}}: Frequent engagement essentials the accessibility of the
-service. Thus, we will design a user-friendly device that lowers the
-barrier for technologically challenged older adults to use the service
-at any time. Data privacy is also emphasized to build trust with users
-and comply with regulations like HIPAA. Overall, these strategies aim to
-provide cognitive benefits through interactive and engaging
-conversations tailored to the needs and capabilities of socially
-isolated older adults.
+The intervention protocol is modified from I-CONECT to fit the AI-based intervention.
+(1) Image and Language Prompts. We adopt the same image and language prompts as I-CONECT to stimulate participants' interests and cognitive functions.
+(2) Reminiscence with Visual interactions. We will engage participants in reminiscence by asking
+about their personal experiences related to the presented images and topics. With the AI tools, the participants will engage in generating personalized images based on the conversation and AI memory from prior sessions.
+(3) Vocabulary Enhancement with Hints. We will prompt the participants to describe the presented images in detail to enhance their vocabulary usage. AI will guide the participants to describe specific details by providing visual hints, e.g., zooming in on image parts.
+(4) Conversation Flow. Each session will last for 15 minutes, starting from greeting, image/topic presentation, open conversation where reminiscence and vocabulary enhancement will be executed spontaneously, and closing. \comm{Create a flow chart.}
+% strategy addresses two main principles: (1)
+% \emph{\ul{Cognitively-Demanding Conversation Strategies}}: This includes
+% engaging users in novel chat experiences to stimulate their cognitive
+% functions, which may enhance brain connectivity and resist
+% neurodegeneration. Strategies of engaging includes providing visual
+% information, novel chat themes and cognitively-demanding topics to
+% stimulate users' cognitive activities. (2) \emph{\ul{User-Friendly
+% Device}}: Frequent engagement essentials the accessibility of the
+% service. Thus, we will design a user-friendly device that lowers the
+% barrier for technologically challenged older adults to use the service
+% at any time. Data privacy is also emphasized to build trust with users
+% and comply with regulations like HIPAA. Overall, these strategies aim to
+% provide cognitive benefits through interactive and engaging
+% conversations tailored to the needs and capabilities of socially
+% isolated older adults.
 
 \textbf{C.2 Development Approach.}
 
@@ -542,12 +540,12 @@ adjustments based on human feedback on empathy and stimulation, and
 potentially exploring a human-in-the-loop hybrid approach in future work
 if AI-only engagement proves insufficient.
 
-\section{IMPACT}
+% \section{IMPACT}
 
-Our team is highly interdisciplinary, comprising a
-statistician, a neurologist, and multiple computer scientists in trial
-design/analytics, all with extensive experience in AD research. This R21
-is especially timely, addressing the growing demand for complementary
-alternatives to traditional human-led interventions. If feasible and
-successful, it will greatly increase the accessibility of early dementia
-intervention for socially isolated older adults.
+% Our team is highly interdisciplinary, comprising a
+% statistician, a neurologist, and multiple computer scientists in trial
+% design/analytics, all with extensive experience in AD research. This R21
+% is especially timely, addressing the growing demand for complementary
+% alternatives to traditional human-led interventions. If feasible and
+% successful, it will greatly increase the accessibility of early dementia
+% intervention for socially isolated older adults.
