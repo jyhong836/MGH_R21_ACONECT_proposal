@@ -13,6 +13,8 @@
 \usepackage{amssymb}  % For mathematical symbols including \geq and \leq
 \usepackage{titlesec}  % For customizing section formatting
 
+\newcommand{\comm}[1]{\textcolor{red}{[#1]}}
+
 % Set font to Arial (Helvetica)
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -78,7 +80,7 @@ feasible and can improve social connection--related outcomes among
 socially isolated older adults with Mild Cognitive Impairment (MCI)
 \cite{dodge2024internet}. However, interviewer-delivered programs are constrained by
 workforce availability and high per-participant cost, rendering a
-persistent barrier to broad dissemination.
+persistent barrier to broad dissemination (scalability).
 
 \textbf{Solutions.} To enhance the accessibility and affordability of
 the I-CONECT intervention, we propose to develop an AI-led
@@ -143,77 +145,94 @@ alternatives to traditional human-led interventions. If feasible and
 successful, it will greatly increase the accessibility of early dementia
 intervention for socially isolated older adults.
 
+
+\cleardoublepage
 \section{Significance}
 
-\textbf{Alzheimer's Disease and related dementias (AD/RD) are difficult
-to treat.} Although the FDA has approved several drugs to treat AD,
-including drugs for mild AD, moderate to severe AD, and, more recently,
-disease-modifying immunotherapy, they come with side effects and high
-cost. Compounding these challenges, only a limited number of patients
-are eligible for the new therapies. As millions of patients remain
-without pharmaceutical treatment options, with estimates suggesting that
-up to $\sim 40\%$ of AD risk may be attributable to modifiable
-factors, early behavioral interventions represent a critical opportunity
-to alter disease trajectories and reduce the growing burden of ADRD
-\cite{livingston2020dementia}.
+\textbf{ADRD is prevalent and is associated with social isolation but remains difficult to treat.}
+Alzheimer's disease and related dementias (ADRD) remain difficult to
+treat, and available pharmacologic options are limited by side effects,
+high cost, and restricted eligibility for newer disease-modifying
+therapies. As millions of patients remain without accessible treatment
+options, and with estimates suggesting that up to $\sim 40\%$ of AD risk
+may be attributable to modifiable factors, scalable behavioral
+interventions represent a critical opportunity to alter trajectories and
+reduce the growing burden of ADRD \cite{livingston2020dementia}. 
+Social isolation is a well-documented, potentially modifiable risk factor:
+epidemiological research has repeatedly associated social isolation with
+greater risk of cognitive decline and dementia
+\cite{evans2019social,kallianpur2023weak,nasem2020social,penninkilampi2018association,poey2017social,shen2022associations}.
+The Lancet Commission on Dementia Prevention estimates that reducing
+social isolation could prevent 4\% of dementia cases \cite{livingston2020dementia}.
+However, the critical barrier is not whether social connection matters,
+but how to deliver sustained, high-fidelity intervention at
+population scale for older adults at risk.
 
-One well-documented risk factor of dementia is social isolation, marked
-by limited social networks and support. Epidemiological research has
-shown that social isolation raises the risk of cognitive decline and
-dementia \cite{evans2019social,kallianpur2023weak,nasem2020social,penninkilampi2018association,poey2017social,shen2022associations}. The Lancet Commission on Dementia Prevention
-reports that reducing social isolation could prevent 4\% of dementia
-cases, surpassing the impacts of reducing physical inactivity and
-diabetes, which are associated with 2\% and 1\% reductions, respectively
-\cite{livingston2020dementia}. Thus, reducing social isolation could have a large impact on
-reducing the prevalence of dementia. One recently completed intervention
-study, which provided frequent social interactions through video chats,
-recruiting socially isolated older subjects with mild cognitive
-impairment (MCI, a precursor stage of dementia), showed a strong
-efficacy (i.e., I-CONECT project (www.i-conect.org): NCT02871921). It
-showed that frequent conversational interactions with human interviewers
-could lead to enhanced cognitive functions \cite{dodge2024internet}.
+\textbf{The efficacy of conversational intervention against social isolation and dementia has been proven, but its scalable delivery remains challenging.}
+Recently, the I-CONECT clinical trial
+(NCT02871921) provides rigorous experimental evidence that frequent,
+semi-structured conversational interactions delivered via video can
+benefit older adults with mild cognitive impairment (MCI)
+\cite{dodge2024internet}. The trial is characterized by protocolized
+delivery with trained interviewers and a controlled framework. However,
+its key limitation, as a foundation for public health impact, is
+feasibility for wide dissemination: interviewer-delivered programs are
+workforce intensive and costly. Scaling requires recruiting, training,
+and supervising staff, plus complex scheduling and quality assurance,
+which can increase costs and reduce delivery consistency. As a result,
+despite efficacy, the model is difficult to sustain for socially
+isolated older adults who need consistent, high-frequency engagement.
 
-\textbf{The high cost of human-led intervention limits its scalability.}
-Though the finding could inspire future dementia prevention methods
-based on conversational engagement, the high cost of hiring human
-interviewers weekly could be cost-ineffective and non-sustainable for
-many older adults. In 2022, 57.6 million Americans were age 65 and
-older. Half of all older adults had less than \$29,740 (US dollars) in
-yearly income from all sources \cite{pensionrights2023income}. It costs at least \$2,496 to
-get a chat support service (according to the voice support salary in
-2024 \cite{ziprecruiter2024chat}) for a twice-per-week service lasting one year. The high
-cost could impede many older adults from accepting the method at the
-risk of dementia.
+\textbf{AI-based conversational solution is scalable but under explored for intervention and concerned with safety.}
+Recent conversational AI systems can generate highly fluent
+conversations at low marginal cost, suggesting a plausible path to scale.
+For example, based on OpenAI GPT-4o pricing (July 2024
+\cite{openai2024pricing}), a twice-per-week, one-year service would cost
+on the order of \$7.68 in model usage fees (0.3\% of an estimated
+\$2,496/year human-delivered service cost, based on 2024 salary estimates
+\cite{ziprecruiter2024chat}). 
+Yet the rigor of evidence for AI as a dementia conversational intervention remains limited:
+it is not established that an AI system can reliably reproduce the
+I-CONECT interviewers' language behaviors, sustain engagement in older
+adults (including those with MCI), or operate safely in real-world
+settings. 
+Our preliminary work suggests that Large Language Models (LLMs) can be
+steered via customized prompts to increase engagement in simulated
+conversations \cite{hong2024aconect}. However, it was under-optimized for older
+adults (e.g., limited modality/device adaptation, engagement and therapy implementation), and feasibility and
+acceptability in the target population are unknown. Because deployment
+with vulnerable older adults poses safety risks (e.g., misinformation,
+biased or harmful content, privacy breaches, emotional distress),
+rigorous development and evaluation are needed to determine whether
+AI-based conversational intervention can be a scalable, safe, and
+effective alternative to human-delivered programs.
 
-\textbf{Intervention via Artificial Intelligence (AI) is scalable but
-under development.} As the conversational AI (e.g., ChatGPT) emerges as
-a powerful tool to respond to humans' prompts with in human-like natural
-language, it is possible that the high cost of conversational engagement
-could be lowered by replacing human interviewers with AI. According to
-the latest price of state-of-the-art AI, OpenAI GPT-4o (in July 2024
-\cite{openai2024pricing}), the cost for a twice-per-week service will be approximated as
-\$7.68, only 0.3\% of the cost of the human service, suggesting a
-cost-effective and affordable alternative for older adults.
+\textbf{AI-CONECT translates I-CONECT to scalable, safety-aware delivery.}
+This R21 directly addresses the scalability barrier by translating the
+evidence-based I-CONECT conversational protocol into an AI-delivered
+system (AI-CONECT) designed for older adults. 
+If successful, this project will shift the field from
+workforce-limited, interviewer-dependent conversational interventions to
+protocol-faithful, on-demand delivery that can be disseminated at scale.
+\emph{Scientifically}, the project will improve knowledge of conversational intervention by evaluating if
+AI-based conversational system is feasible and satisfiable to execute
+I-CONECT intervention protocols in socially isolated older adults with MCI or normal cognition. 
+\emph{Technically}, it will advance the state of AI-based conversational
+interventions by directly addressing key implementation challenges:
+maintaining protocol fidelity to the I-CONECT workflow, enhancing
+engagement during extended sessions through cognitively demanding
+prompts and turn-taking support, reducing technology barriers via a
+voice-forward multimodal interface, and incorporating safety-aware
+monitoring to mitigate risks (e.g., misinformation, financial
+exploitation, or emotional distress) during home use.
+\emph{Clinically}, it will provide novel methods for future behavioral interventions, preparing for next clinical trials using AI-based solutions.
 
-Despite the low cost of conversational AI, its potential for
-conversational engagement has not been proven yet. Once proven, an
-AI-based chatbot may be used for dementia prevention in future clinical
-trials. As a pilot study, this project will examine whether the
-conversational AI (e.g., OpenAI GPT-4o) can simulate the interviewers'
-language behaviors in the I-CONECT project (using the same picture
-prompts and conversational styles from the efficacy-proven study) and
-implement the same intervention strategies (stimulating cognitive
-functions and sufficiently engaging interviewees) for future clinical
-trials. Specifically, our chatbot will be designed to offer cognitively
-demanding conversations, mimicking the I-CONECT trial's interactions
-with human interviewers, with a user- and MCI-patient-friendly interface
-that is friendly to older adults and ones with mild congitive
-effectively engage them. The chatbot will ensure natural, effortless
-conversations through an engaging vocal interface, accommodating older
-adults with varying cognitive capacities. If successfully deployed, the
-AD/RD-oriented chatbot can greatly improve the accessibility of early
-dementia prevention for socially isolated older adults in terms of
-accessibility and cost.
+% If successful, this project will shift the field from
+% workforce-limited, interviewer-dependent conversational interventions to
+% protocol-faithful, on-demand delivery that can be disseminated at scale. It would enable larger and more
+% diverse prevention studies, reduce per-participant delivery costs, and
+% support future implementation of conversational engagement as a broadly
+% accessible service for older adults at risk for cognitive decline.
 
 \section{INNOVATION}
 
@@ -246,7 +265,11 @@ experiences.
 
 \section{Approach}
 
-\textbf{Intervention Approach.} The recent research, an Internet-based conversational engagement
+\comm{Add a teaser figure.}
+
+\subsection{C.1 Intervention Approach.}
+
+The recent research, an Internet-based conversational engagement
 randomized controlled clinical trial (I-CONECT), evidenced that
 stimulating frequent social interactions with trained interviewers via
 the Internet/webcam could improve global cognitive functions and
@@ -276,13 +299,15 @@ provide cognitive benefits through interactive and engaging
 conversations tailored to the needs and capabilities of socially
 isolated older adults.
 
-\textbf{Development Approach.} The key challenge is to implement the intervention strategies that have
+\subsection{C.2 Development Approach.}
+
+The key challenge is to implement the intervention strategies that have
 been practiced in the I-CONECT trial. A system customizing AI and
 validating compliance is essential before being used by humans. Thus,
 our main technology includes three folds. All development or deployments
 will be carried out in HIPAA-compliant servers to ensure data privacy.
 
-(1) \textbf{Implementing Intervention Strategies via Customizing AI}: We
+\textbf{(1) Implementing Intervention Strategies via Customizing AI}: We
 use the advanced Large Language Model (LLM) as the core of AI, which is
 able to communicate with humans in natural language. We will customize
 the state-of-the-art LLM (GPT-4o or its variants) to follow the
@@ -304,7 +329,7 @@ being biased toward users' private information, for example, personal
 experiences that should not be shared with a third party, we will use
 privacy-preserving machine learning in the process \cite{xiang2024guardagent}.
 
-(2) \textbf{Conversation Simulation for Implementation Validation}: To
+\textbf{(2) Conversation Simulation for Implementation Validation}: To
 validate the implementation of the conversation strategies, we will
 create virtual users that are LLMs finetuned on old adults' recorded
 conversations and then simulate conversations with the socially-isolated
@@ -318,7 +343,7 @@ generated by LLMs in the conversations. We will fix the problems by
 creating a cleaned dataset and continually fine-tuning LLMs to forget
 the contents \cite{liu2024rethinking}.
 
-(3) \textbf{Device Development}: We will develop an old-adult-centered
+\textbf{(3) Device Development}: We will develop an old-adult-centered
 interface device to facilitate the accessibility of our chatbot service.
 We will minimize the operation complexities for older adults such that
 older adults without computer-use experience can easily start a
@@ -345,7 +370,9 @@ will stick to the principles of intervention strategies to provide novel
 chat experiences and visual stimulations (through external visual
 tools).
 
-\textbf{Approach for Feasibility Study.} We will test the chatbot on the stakeholders at the AITC and our
+\subsection{C.3 Approach for Feasibility Study.} 
+
+We will test the chatbot on the stakeholders at the AITC and our
 performance sites to get a feasibility survey that can guide the
 improvement of the chatbot design. About 20 recruited older human
 participants (age $\geq 75$) will be recruited to complete
