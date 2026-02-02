@@ -67,17 +67,23 @@ approaches or methodologies, instrumentation, or interventions.
 
 ### Approach
 
-1. Describe the overall strategy, methodology, and analyses to be used to accomplish the
-specific aims of the project. Describe plans to address weaknesses in the rigor of the prior
-research that serves as the key support for the proposed project. Describe the
-experimental design and methods proposed and how they will achieve robust and
-unbiased results. Include how the data will be collected, analyzed, and interpreted, and
-reference any Resource Sharing Plans and the Data Management and Sharing (DMS) Plan,
-as appropriate. Resources and tools for rigorous experimental design can be found at theEnhancing Reproducibility through Rigor and Transparency website.
-2. For trials that randomize groups or deliver interventions to groups, describe how your
+Method:
+1. Describe the overall strategy, 
+2. methodology, and 
+3. analyses to be used to accomplish the specific aims of the project. 
+4. Describe plans to **address weaknesses** in the rigor of the prior research that serves as the key support for the proposed project. 
+5. Describe the experimental design and methods proposed and how they will achieve robust and unbiased results. 
+6. Include how the data will be collected, analyzed, and interpreted, and reference any Resource Sharing Plans and the Data Management and Sharing (DMS) Plan, as appropriate. 
+7. Resources and tools for rigorous experimental design can be found at theEnhancing Reproducibility through Rigor and Transparency website.
+
+Data analysis:
+2. For trials that randomize groups or **deliver interventions** to groups, describe how your
 methods for analysis and sample size are appropriate for your plans for participant
 assignment and intervention delivery. These methods can include a group- or clusterrandomized trial or an individually randomized group-treatment trial. Additional
 information is available at the Research Methods Resources webpage.
+
+
+Potential Risks and Alternative strategies:
 3. Discuss potential problems, alternative strategies, and benchmarks for success anticipated
 to achieve the aims.
 4. If the project is in the early stages of development, describe any strategy to establish
@@ -91,7 +97,4 @@ additional information.
 6. Point out any procedures, situations, or materials that may be hazardous to personnel and
 the precautions to be exercised. A full discussion on the use of select agents should
 appear in the Select Agent Research attachment below.
-7. If research on Human Embryonic Stem Cells (hESCs) is proposed but an approved cell line
-from the NIH hESC Registry cannot be chosen, provide a strong justification for why an
-appropriate cell line cannot be chosen from the registry at this time.
 

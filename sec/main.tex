@@ -3,63 +3,42 @@
 \textbf{Significance}. Alzheimer's disease and related dementias (ADRD)
 remain a major and growing public health burden, and the disease's
 multifactorial biology continues to outpace the impact of available
-therapies \cite{zhang2024recent}. Current U.S. Food and Drug Administration-approved
-symptomatic treatments offer at best modest and often short-lived
-benefits, while newer disease-modifying anti-amyloid immunotherapies are
-limited to biomarker- confirmed early Alzheimer's disease and are
+therapies\cite{zhang2024recent}. Current U.S. Food and Drug Administration-approved
+symptomatic treatments offer modest benefits, while newer disease-modifying anti-amyloid immunotherapies are
+limited to biomarker-confirmed early Alzheimer's disease and are
 accompanied by restricted patient eligibility and significant treatment
-burden with ongoing cost-effectiveness concerns \cite{mangalagiu2025pharmacological}. Thus, it is
-important to develop accessible and affordable prevention strategies
-that address modifiable dementia risk factors early in the disease
-course.
+burden with cost-effectiveness concerns\cite{mangalagiu2025pharmacological}. 
+Thus, it is important to develop accessible and affordable prevention strategies early in the disease course.
 
-\textbf{Critical Barriers.} Social isolation is a recognized, modifiable
+\textbf{Critical Barriers.} Though social isolation is a recognized, modifiable
 risk factor for cognitive decline and dementia in older adults
-\cite{evans2019social,kallianpur2023weak,nasem2020social,penninkilampi2018association,poey2017social,shen2022associations}, yet effective interventions that can deliver sustained,
-high-fidelity social engagement at the population scale remain limited.
+\cite{evans2019social,kallianpur2023weak,nasem2020social,penninkilampi2018association,poey2017social,shen2022associations}, effective interventions that can deliver sustained, high-fidelity social engagement at the population scale remain limited.
 The I-CONECT clinical trial (NCT02871921) provides evidence that
-semi-structured conversational engagement with cognitive stimulation is
-feasible and can improve social connection--related outcomes among
-socially isolated older adults with Mild Cognitive Impairment (MCI)
-\cite{dodge2024internet}. However, interviewer-delivered programs are constrained by
-workforce availability and high per-participant cost, rendering a
-persistent barrier to broad dissemination (scalability).
+semi-structured conversational engagement with cognitive stimulation can mitigate social isolation and cognitive decline among socially isolated older adults with Mild Cognitive Impairment (MCI) \cite{dodge2024internet}. Yet, human-delivered programs are constrained by workforce availability and high cost, rendering a persistent barrier to broad dissemination.
 
 \textbf{Solutions.} To enhance the accessibility and affordability of
 the I-CONECT intervention, we propose to develop an AI-led
 conversational intervention (AI-CONECT) by leveraging advanced
 Generative AI to simulate the human-delivered I-CONECT conversational
-intervention. Similar to the I-CONECT intervention, the AI chatbot will
-provide the same conversation structure, cognitive stimulation with
-images and pre-selected topics, and conversation strategies to engage
-participants and stimulate their cognitive functions. The multi-modality
-interaction of the chatbot includes on-demand voice input/output and
-visual emotion responses, which minimizes the gap to human interactions.
-Our preliminary result \cite{hong2024aconect} has shown that Large Language Models
-(LLMs) with customized prompts can increase participants' engagement in
-simulated conversations. However, the system in \cite{hong2024aconect} is
-under-optimized for engaging older adults: limited modality or device
-adaptation for a technique-unfamiliar population. Moreover, the
+intervention. Following the I-CONECT intervention, the AI chatbot will
+provide similar conversation strategies to engage participants and stimulate their cognitive functions. 
+% The chatbot will be installed with an multi-modality interface that minimizes the gap to human interactions by using real-time voice input/output and visual emotion responses.
+Our preliminary result\cite{hong2024aconect} has shown that Large Language Models (LLMs) can be customized to increase participants' (with MCI) engagement in
+simulated conversations. However, the system was under-optimized for engaging older adults: limited number of participants, limited modality or device adaptation for a technique-unfamiliar population. Moreover, the
 feasibility of the AI-led intervention has not been evaluated among the
 targeted population yet. Thus, our specific aims in this proposal are:
 
 \textbf{Aim 1: Develop a user-friendly multi-modality social chatbot
 system (AI-CONECT) for executing the I-CONECT intervention.} We will
-develop the chatbot for two design goals. (i) \textbf{Intervention
+develop the chatbot for two design goals. (i) \textbf{Protocol
 compliance}: We will use an agentic design to enable the AI chatbot to
-follow the I-CONECT dialogue workflow, present chat materials, and
-generate engaging responses adaptively based on the users' responses
-\cite{hong2024aconect}. (ii) \textbf{User friendliness}: New tech has great barriers
-for older adults, particularly those with MCI, to use. To reduce the
-barrier, we will integrate on-demand voice input/output with visual
-emotion-responsive interaction. We will also deploy a ready-to-use,
-older-adult-friendly tablet paired with an emotion-aware social robot
-that provides real-time affective feedback to support sustained
-engagement \cite{zhao2025transferring}. (iii) \textbf{Safety}: Older adults with MCI and
-living alone have limited awareness of AI risks and could have higher
-risks in use. We will create real-time guardrails on the conversation to
+follow the I-CONECT protocol: execute semi-structured conversations, engage participants in reminiscence and vocabulary enhancement. (ii) \textbf{User friendliness}: To reduce the use
+barrier for older adults, we will integrate real-time voice input/output with visual
+emotion-responsive interaction\cite{zhao2025transferring}. The whole system will be deployed on an older-adult-friendly tablet paired with an emotion-aware social robot
+that provides real-time affective feedback. 
+(iii) \textbf{Safety}: Limited awareness of AI risks may place older adults at higher risk when using AI systems. We will adopt real-time guardrails on the conversation to
 monitor critical situations like low emotion, suicide, misinformation,
-or financial risks \cite{xiang2024guardagent}.
+or financial risks\cite{xiang2024guardagent}.
 
 \textbf{Aim 2: Conduct a feasibility and satisfaction survey with 40
 socially isolated older adults (age $\geq$ 75) with MCI or normal
@@ -71,47 +50,44 @@ will be an independent conversation with our chatbot for 15 minutes. A
 staff member will do weekly 15-min check-in phone calls to assess the
 emotional status and potential risks in using AI. We will collect both
 objective data and subjective surveys to assess the feasibility and
-satisfaction. (i) \textbf{Objective Data}. We will collect the adherence
+satisfaction. (i) \textbf{Adherence}. We will collect the adherence
 rate, the portion of participants who completed over 80\% of sessions,
 and the engagement degree, the ratio of words spoken by the user. (ii)
-\textbf{Subjective data}. Each participant will do a survey after 6
+\textbf{Satisfaction}. Each participant will do a survey after 6
 weeks. The survey will focus on the participants' satisfaction with the
 chatbot, including willingness to use the device in the future,
 emotional influence, opinions on the quality of the chatbot, for
 instance, if the chatbot presents empathy, and high fluency.
 
 \textbf{Impact}. Our team is highly interdisciplinary, comprising a
-statistician, a neurologist, and multiple computer scientists in trial
+statistician, a neurologist, and computer scientists in trial
 design/analytics, all with extensive experience in AD research. This R21
 is especially timely, addressing the growing demand for complementary
 alternatives to traditional human-led interventions. If feasible and
-successful, it will greatly increase the accessibility of early dementia
+successful, it will greatly increase the scalability of early dementia
 intervention for socially isolated older adults.
 
 
 \cleardoublepage
 \section{Significance}
 
-\textbf{ADRD is prevalent and is associated with social isolation but remains difficult to treat.}
-Alzheimer's disease and related dementias (ADRD) remain difficult to
-treat, and available pharmacologic options are limited by side effects,
-high cost, and restricted eligibility for newer disease-modifying
-therapies. As millions of patients remain without accessible treatment
+% \textbf{ADRD is prevalent but remains difficult to treat.}
+ADRD is difficult to treat, and available pharmacologic options are limited by side effects, high cost, and restricted eligibility for newer disease-modifying
+therapies\cite{zhang2024recent}. As millions of patients remain without accessible treatment
 options, and with estimates suggesting that up to $\sim 40\%$ of AD risk
 may be attributable to modifiable factors, scalable behavioral
 interventions represent a critical opportunity to alter trajectories and
 reduce the growing burden of ADRD \cite{livingston2020dementia}. 
-Social isolation is a well-documented, potentially modifiable risk factor:
-epidemiological research has repeatedly associated social isolation with
+% Social isolation is a well-documented, potentially modifiable risk factor:
+Fir example, epidemiological research has repeatedly associated social isolation with
 greater risk of cognitive decline and dementia
 \cite{evans2019social,kallianpur2023weak,nasem2020social,penninkilampi2018association,poey2017social,shen2022associations}.
 The Lancet Commission on Dementia Prevention estimates that reducing
 social isolation could prevent 4\% of dementia cases \cite{livingston2020dementia}.
-However, the critical barrier is not whether social connection matters,
-but how to deliver sustained, high-fidelity intervention at
-population scale for older adults at risk.
+Thus, it is essential to explore how to deliver intervention at
+population scale for older adults against social isolation and thereby dementia.
 
-\textbf{The efficacy of conversational intervention against social isolation and dementia has been proven, but its scalable delivery remains challenging.}
+\textbf{The efficacy of conversational intervention has been proven, but its scalable delivery remains challenging.}
 Recently, the I-CONECT clinical trial
 (NCT02871921) provides rigorous experimental evidence that frequent,
 semi-structured conversational interactions delivered via video can
@@ -178,17 +154,17 @@ exploitation, or emotional distress) during home use.
 \section{INNOVATION}
 
 \textbf{Clinical Innovation: Translating human-delivered intervention to AI-based conversational system.}
-AI-CONECT is innovative in directly translating a proven, interviewer-led dementia prevention intervention into a protocol-faithful, AI-delivered system tailored for socially isolated older adults. Rather than designing a de novo chatbot, we explicitly encode and iteratively refine the established I-CONECT workflow, conversational strategies, and cognitively demanding prompts within a multimodal, safety-aware AI framework. This systematic translation enables high-fidelity automation of a complex behavioral intervention while preserving its therapeutic intent, thereby opening a new paradigm for scaling evidence-based conversational therapies.
+AI-CONECT is innovative in directly translating a proven, interviewer-led dementia prevention intervention into a protocol-faithful, AI-delivered system tailored for socially isolated older adults. This systematic translation enables high-fidelity automation of the intervention, thereby opening a new paradigm for scaling evidence-based conversational intervention.
 
 \textbf{Technology Innovation 1: Accelerating cohort-oriented development of AI chatbots via data-driven simulation.} 
-Developing an AI chatbot for a cohort with specific needs (e.g., socially isolated older adults with mild cognitive impairment (MCI)) is limited by scarce data, high evaluation cost, and the risk of deploying immature designs. We introduce a data-driven simulation framework to model cohort-typical language and engagement behaviors and to stress-test candidate chatbot behaviors \emph{before} involving older adults. Unlike previous simulation methods\comm{cite Patient Psi}, our method is grounded in recorded I-CONECT conversations (enabling us to capture unique MCI traits) and intervention goals (e.g., engagement and reminiscence). This approach refines and extends existing chatbot development methods by adding quantitative, intervention-relevant evaluation environment that enable rapid iteration, transparent comparison across versions, and earlier identification of failure modes (e.g., low engagement or protocol drift), thereby reducing development time and risk.
+Developing an AI chatbot for a cohort with specific needs (e.g., socially isolated older adults with mild cognitive impairment (MCI)) is limited by scarce data, high evaluation cost, and the risk of deploying immature designs. We introduce a data-driven simulation framework to model cohort-typical language and engagement behaviors and to stress-test candidate chatbot behaviors \emph{before} involving older adults. Unlike previous simulation methods~\cite{wang2024patient}, our method is grounded in recorded I-CONECT conversations (enabling us to capture unique MCI traits) and intervention goals (e.g., engagement and reminiscence). This approach refines and extends existing chatbot development methods by adding quantitative, intervention-relevant virtual evaluation environment that enable rapid iteration, transparent comparison across versions, and earlier identification of failure modes (e.g., low engagement or protocol drift), thereby reducing development time and risk.
 
 \textbf{Technology Innovation 2: User-friendly multi-modality and voice-responsive interaction enhancing engagement.}
 For socially isolated older adults with MCI, technology burden is a primary barrier to sustained engagement, particularly for systems that assume typing, app navigation, or complex setup.
 When they faces a digital device, their attention can be easily distracted.
-Using proper prompts/cues can effectively draw their attention and stimulate cognitive functions \comm{cite BCT papers}.
+Using proper prompts/cues can effectively draw their attention and stimulate cognitive functions \cite{carey2019behavior}.
 We will apply and extend multimodal human--computer interaction approaches by delivering a \emph{voice-forward} system (real-time speech input/output) with simple visual, emotion-responsive feedback designed for older-adult accessibility. 
-As a novel instrumentation choice for this setting, we will deploy the intervention on a ready-to-use tablet paired with an emotion-aware social robot that provides immediate affective cues, reducing interaction complexity while supporting engagement. Compared with conventional chat interfaces, this design lowers operational demands and enables more natural conversational flow aligned with the I-CONECT interaction style.
+To reduce interaction complexity while supporting engagement, we will deploy the chatbot on a ready-to-use tablet paired with an emotion-aware social robot that provides immediate affective cues. Compared with conventional chat interfaces, this design lowers operational demands and enables more natural conversational flow aligned with the I-CONECT interaction style.
 To draw participants' attention and stimulate users' cognitive functions, we will leverage AI to generate personalized images based on the learned personal preferences in multiple sessions, as complementary prompts/cues to I-CONECT image and lanugage prompts.
 
 
@@ -199,29 +175,16 @@ To draw participants' attention and stimulate users' cognitive functions, we wil
 
 \section{Approach}
 
-\comm{Add a teaser figure.}
+\textbf{Overall Strategy.} We will develop an AI-based conversational system (AI-CONECT) to implement the I-CONECT intervention strategies and evaluate its feasibility and satisfaction among socially isolated older adults with MCI or normal cognition.
 
-\textbf{C.1 Intervention Approach.}
+\textbf{C.1 Intervention Strategy}
 
-The recent research, an Internet-based conversational engagement
-randomized controlled clinical trial (I-CONECT), evidenced that
-stimulating frequent social interactions with trained interviewers via
-the Internet/webcam could improve global cognitive functions and
-episodic memory among socially isolated older subjects (aged 75 and
-above) with mild cognitive impairment (MCI) \cite{dodge2024internet}. In this proposal
-(AI-CONECT), we \textbf{hypothesize} that a chatbot can mimic a human
-interviewer in these interactions and follow a similar intervention
-strategy as the human interviewers did in the human-based I-CONECT
-project. Based on I-CONECT, we propose protocl of intervention and
-verify the hypothesis through two-step evaluation: scalable virtual
-testing and pilot human survey.
-
-The intervention protocol is modified from I-CONECT to fit the AI-based intervention.
-(1) Image and Language Prompts. We adopt the same image and language prompts as I-CONECT to stimulate participants' interests and cognitive functions.
-(2) Reminiscence with Visual interactions. We will engage participants in reminiscence by asking
+The intervention protocol is modified from I-CONECT~\cite{dodge2024internet} to fit the AI-based intervention.
+Each session will last for 15 minutes following the conversation flow: starting from greeting, image/topic presentation, open conversation where reminiscence and vocabulary enhancement will be executed spontaneously.
+(1) \textit{Image and Language Prompts}. We adopt the same image and language prompts as I-CONECT to stimulate participants' interests and cognitive functions. The prompts includes topics were selected in I-CONECT study, that initiate the conversations with little motivations.
+(2) \textit{Reminiscence with Visual interactions}. We will engage participants in reminiscence by asking
 about their personal experiences related to the presented images and topics. With the AI tools, the participants will engage in generating personalized images based on the conversation and AI memory from prior sessions.
-(3) Vocabulary Enhancement with Hints. We will prompt the participants to describe the presented images in detail to enhance their vocabulary usage. AI will guide the participants to describe specific details by providing visual hints, e.g., zooming in on image parts.
-(4) Conversation Flow. Each session will last for 15 minutes, starting from greeting, image/topic presentation, open conversation where reminiscence and vocabulary enhancement will be executed spontaneously, and closing. \comm{Create a flow chart.}
+(3) \textit{Vocabulary Enhancement with Hints}. We will prompt the participants to describe the presented images in detail to enhance their vocabulary usage. AI will guide the participants to describe specific details by providing visual hints, e.g., zooming in on image parts.
 % strategy addresses two main principles: (1)
 % \emph{\ul{Cognitively-Demanding Conversation Strategies}}: This includes
 % engaging users in novel chat experiences to stimulate their cognitive
@@ -238,52 +201,31 @@ about their personal experiences related to the presented images and topics. Wit
 % conversations tailored to the needs and capabilities of socially
 % isolated older adults.
 
-\textbf{C.2 Development Approach.}
+\textbf{C.2 Chatbot Development}
 
-The key challenge is to implement the intervention strategies that have
-been practiced in the I-CONECT trial. A system customizing AI and
-validating compliance is essential before being used by humans. Thus,
-our main technology includes three folds. All development or deployments
-will be carried out in HIPAA-compliant servers to ensure data privacy.
+We develop AI-based chatbot to implement the intervention strategies with three components: (1) implementing intervention strategies via customizing AI, (2) virtual validation to drive AI optimization, (3) safety assurance, and (4) device development.
+All development or deployments will be carried out in HIPAA-compliant servers to ensure data privacy.
 
-\textbf{(1) Implementing Intervention Strategies via Customizing AI}: We
-use the advanced Large Language Model (LLM) as the core of AI, which is
-able to communicate with humans in natural language. We will customize
-the state-of-the-art LLM (GPT-4o or its variants) to follow the
-intervention strategies from the I-CONECT project. We will engineer
-prompts that instruct LLMs to carry out predefined tasks, including
-proposing chat themes and topics, and presenting topic-related images.
-To enhance LLM's capability in engaging users in 30-min conversations,
-we will improve the conversation engagement using heuristics and data
-from the I-CONECT trials. On the one hand, we will consult interviewers
-and related researchers (from Dr. Dodge's team) to provide heuristic
-conversation strategies and encode the heuristics in the instructions
-for LLMs. On the other hand, we will finetune the LLMs to learn the
-spontaneous language patterns, for example, the active use of filler
-words, from interviewers' speech in the I-CONECT conversation data. The
-conversation data will be processed from audio recordings, and we will
-develop speaker-aware Automatic Speech Recognition to extract
-high-quality text data for LLMs finetuning. To avoid LLMs memorizing or
-being biased toward users' private information, for example, personal
-experiences that should not be shared with a third party, we will use
-privacy-preserving machine learning in the process \cite{xiang2024guardagent}.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figures/dev.png}
+\end{figure}
 
-\textbf{(2) Conversation Simulation for Implementation Validation}: To
-validate the implementation of the conversation strategies, we will
-create virtual users that are LLMs finetuned on old adults' recorded
-conversations and then simulate conversations with the socially-isolated
-older adults to quantitatively evaluate the chatbot. The simulation will
-learn the I-CONECT participants' language traits that may drive the
-engagement designs. To provide a concrete simulation of older adults
-with MCI, we will validate that the virtual users can generate similar
-language symptoms that have been proven effective for MCI diagnosis
-\cite{hoang2023subject}. For safety purposes, we will examine the biased content
-generated by LLMs in the conversations. We will fix the problems by
-creating a cleaned dataset and continually fine-tuning LLMs to forget
-the contents \cite{liu2024rethinking}.
+\textbf{(1) Optimizing AI for Protocol Compliance via Learning from Verifiable Feedback.}
+We will customize Large Language Models (LLMs) to implement the I-CONECT intervention strategies. We will first engineer prompts that instruct LLMs to carry out predefined tasks, including proposing chat themes and topics, and presenting topic-related images. To enhance LLM's capability in engaging users in 15-min conversations, we will improve the conversation engagement using heuristics and data from the I-CONECT trials. On the one hand, we will consult interviewers and related researchers (from I-CONECT team) to provide heuristic conversation strategies and encode the heuristics in the instructions for LLMs. On the other hand, we will \textit{supervised-finetune} the LLMs to learn the spontaneous language patterns, for example, the active use of filler words, from interviewers' speech in the I-CONECT conversation data. The conversation data will be processed from audio recordings, and we will develop speaker-aware Automatic Speech Recognition to extract high-quality text data for LLMs finetuning.
+Then, we will train LLMs to learn from the \textit{feedback} on the compliance in conversations. Every time the LLM had a conversation with a user (participant), we will use rule-based method to rate the protocol compliance (engagement time, reminiscence-induction frequency, and user vocabulary). The ratings will be used to train a reward model that guides the LLMs to generate protocol-compliant conversations via Reinforcement Learning with (Human) Feedback (RLVF)\cite{ouyang2022training}.
 
-\textbf{(3) Device Development}: We will develop an old-adult-centered
-interface device to facilitate the accessibility of our chatbot service.
+\textbf{(2) Learning to Simulate Human Feedback from I-CONECT Data.}
+The RLHF relies on conversation between the chatbot and real users to collect feedback. However, collecting feedback from real users is costly and risky, especially when the users are socially isolated older adults with MCI. To reduce the cost and risk, we will create virtual users that are LLMs finetuned on old adults' recorded conversations and then simulate conversations with the socially-isolated older adults to quantitatively evaluate the chatbot. The simulation will learn the I-CONECT participants' language traits that may drive the engagement designs. To provide a concrete simulation of older adults with MCI, we will validate that the virtual users can generate similar language symptoms that have been proven effective for MCI diagnosis \cite{hoang2023subject}. 
+
+\textbf{(3) Safety Assurance via Real-time Monitoring.}
+For safety purposes, we will examine the biased content generated by LLMs in the conversations. We will fix the problems by creating a cleaned dataset and continually fine-tuning LLMs to forget the contents \cite{liu2024rethinking}.
+Yet, unknown risks may arise at deployment.
+To eliminate such risks, we will create real-time safety guardrails that monitor the conversations and detect critical situations like low emotion, suicide, misinformation, or financial risks.
+The guardrails will use generative rule-based methods, where an GuardAgent will generate guardrail rules to screen out unsafe generation in conversations\cite{xiang2024guardagent}.
+
+\textbf{(4) Device and Interface Development}: We will develop an old-adult-centered
+interface and device to facilitate the accessibility of our chatbot service.
 We will minimize the operation complexities for older adults such that
 older adults without computer-use experience can easily start a
 conversation in natural language. The service will be available 24 hours
@@ -294,27 +236,78 @@ deliver an AI-empowered voice chatbot software that can be installed in
 portable hardware, which implements I-CONECT conversation strategies and
 attains high satisfaction from our survey participants.
 
-\textbf{Feasibility Evaluation of the AI-based Implementation during
-Development}. We will evaluate the chatbot in both virtual and human
-evaluations to validate if the chatbot is able to implement the same
-intervention strategies as the human interviewers. (1) \emph{\ul{Virtual
-Testing}}. In the early stage of development, we adopt a cost-effective
-method to evaluate the chatbot, where we simulate conversations between
-the designed chatbot and a virtual user. The virtual user is constructed
-as a digital simulation of a real old adult with or without mild
-cognitive impairment. Extensive simulation enables scalable tests to
-study how well the chatbot follows the intervention strategies. In the
-simulation, we will use GPT-4o to automatically examine if the chatbot
-will stick to the principles of intervention strategies to provide novel
-chat experiences and visual stimulations (through external visual
-tools).
+
+
+% \textbf{(1) Implementing Intervention Strategies via Customizing AI}: We
+% use the advanced Large Language Model (LLM) as the core of AI, which is
+% able to communicate with humans in natural language. We will customize
+% the state-of-the-art LLM (GPT-4o or its variants) to follow the
+% intervention strategies from the I-CONECT project. We will engineer
+% prompts that instruct LLMs to carry out predefined tasks, including
+% proposing chat themes and topics, and presenting topic-related images.
+% To enhance LLM's capability in engaging users in 15-min conversations,
+% we will improve the conversation engagement using heuristics and data
+% from the I-CONECT trials. On the one hand, we will consult interviewers
+% and related researchers (from I-CONECT team) to provide heuristic
+% conversation strategies and encode the heuristics in the instructions
+% for LLMs. On the other hand, we will finetune the LLMs to learn the
+% spontaneous language patterns, for example, the active use of filler
+% words, from interviewers' speech in the I-CONECT conversation data. The
+% conversation data will be processed from audio recordings, and we will
+% develop speaker-aware Automatic Speech Recognition to extract
+% high-quality text data for LLMs finetuning. 
+% % To avoid LLMs memorizing or
+% % being biased toward users' private information, for example, personal
+% % experiences that should not be shared with a third party, we will use
+% % privacy-preserving machine learning in the process\cite{xiang2024guardagent}.
+
+% \textbf{(2) Virtual Validation to Drive AI Optimization}: To validate the implementation of the conversation strategies, we will
+% validate the implementation of the conversation strategies, we will
+% create virtual users that are LLMs finetuned on old adults' recorded
+% conversations and then simulate conversations with the socially-isolated
+% older adults to quantitatively evaluate the chatbot. The simulation will
+% learn the I-CONECT participants' language traits that may drive the
+% engagement designs. To provide a concrete simulation of older adults
+% with MCI, we will validate that the virtual users can generate similar
+% language symptoms that have been proven effective for MCI diagnosis
+% \cite{hoang2023subject}. For safety purposes, we will examine the biased content
+% generated by LLMs in the conversations. We will fix the problems by
+% creating a cleaned dataset and continually fine-tuning LLMs to forget
+% the contents \cite{liu2024rethinking}.
+
+% \textbf{Virtual Evaluation during Development}. We will evaluate the chatbot in both virtual and human
+% evaluations to validate if the chatbot is able to implement the same
+% intervention strategies as the human interviewers. (1) \emph{\ul{Virtual
+% Testing}}. In the early stage of development, we adopt a cost-effective
+% method to evaluate the chatbot, where we simulate conversations between
+% the designed chatbot and a virtual user. The virtual user is constructed
+% as a digital simulation of a real old adult with or without mild
+% cognitive impairment. Extensive simulation enables scalable tests to
+% study how well the chatbot follows the intervention strategies. In the
+% simulation, we will use GPT-4o to automatically examine if the chatbot
+% will stick to the principles of intervention strategies to provide novel
+% chat experiences and visual stimulations (through external visual
+% tools).
+
+% \textbf{Safety Guardrails.}
+
+% \textbf{(3) Device Development}: We will develop an old-adult-centered
+% interface device to facilitate the accessibility of our chatbot service.
+% We will minimize the operation complexities for older adults such that
+% older adults without computer-use experience can easily start a
+% conversation in natural language. The service will be available 24 hours
+% a day through voice, which is friendly for older adults with difficulty
+% typing. We will get feedback from survey participants on the
+% accessibility and improve the designs accordingly. Finally, we will
+% deliver an AI-empowered voice chatbot software that can be installed in
+% portable hardware, which implements I-CONECT conversation strategies and
+% attains high satisfaction from our survey participants.
+
+
 
 \textbf{C.3 Approach for Feasibility Study.} 
 
-We will test the chatbot on the stakeholders at the AITC and our
-performance sites to get a feasibility survey that can guide the
-improvement of the chatbot design. About 20 recruited older human
-participants (age $\geq 75$) will be recruited to complete
+We will test the chatbot at the Memory Division of the Massachusetts Alzheimer's Disease Research Center (MADRC) and I-CONECT Foundation. 40 older adults will be recruited to complete
 feasibility/satisfaction surveys on their overall experience in terms of
 adherence, happiness, emotional lifting, empathy, and trustworthiness
 (e.g., reporting harmful or hateful biases). The survey will also
@@ -514,7 +507,7 @@ satisfaction, while remaining consistent with the exploratory and
 developmental intent of the mechanism and the ``clinical trial not
 allowed'' designation.
 
-\section{POTENTIAL RISKS AND ALTERNATIVE STRATEGIES}
+\section{POTENTIAL Risks AND ALTERNATIVE STRATEGIES}
 
 The project
 faces four main risks with corresponding alternative strategies:
@@ -540,12 +533,12 @@ adjustments based on human feedback on empathy and stimulation, and
 potentially exploring a human-in-the-loop hybrid approach in future work
 if AI-only engagement proves insufficient.
 
-% \section{IMPACT}
+\section{IMPACT}
 
-% Our team is highly interdisciplinary, comprising a
-% statistician, a neurologist, and multiple computer scientists in trial
-% design/analytics, all with extensive experience in AD research. This R21
-% is especially timely, addressing the growing demand for complementary
-% alternatives to traditional human-led interventions. If feasible and
-% successful, it will greatly increase the accessibility of early dementia
-% intervention for socially isolated older adults.
+Our team is highly interdisciplinary, comprising a
+statistician, a neurologist, and multiple computer scientists in trial
+design/analytics, all with extensive experience in AD research. This R21
+is especially timely, addressing the growing demand for complementary
+alternatives to traditional human-led interventions. If feasible and
+successful, it will greatly increase the accessibility of early dementia
+intervention for socially isolated older adults.
