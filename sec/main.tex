@@ -32,8 +32,8 @@ targeted population yet. Thus, our specific aims in this proposal are:
 system (AI-CONECT) for executing the I-CONECT intervention.} We will
 develop the chatbot for two design goals. (i) \textbf{Protocol
 compliance}: We will use an agentic design to enable the AI chatbot to
-follow the I-CONECT protocol: execute semi-structured conversations, engage participants in reminiscence and vocabulary enhancement. (ii) \textbf{User friendliness}: To reduce the use
-barrier for older adults, we will integrate real-time voice input/output with visual
+follow the I-CONECT protocol: execute semi-structured conversations, engage participants in reminiscence and vocabulary enhancement. (ii) \textbf{Usability}: To reduce the use
+barrier for older adults, we will integrate real-time responsive voice interface with visual
 emotion-responsive interaction\cite{zhao2025transferring}. The whole system will be deployed on an older-adult-friendly tablet paired with an emotion-aware social robot
 that provides real-time affective feedback. 
 (iii) \textbf{Safety}: Limited awareness of AI risks may place older adults at higher risk when using AI systems. We will adopt real-time guardrails on the conversation to
@@ -45,19 +45,19 @@ socially isolated older adults (age $\geq$ 75) with MCI or normal
 cognition to evaluate the chatbot and identify areas for future
 improvement.} We will recruit participants to use our chatbot for
 intervention and conduct a brief survey among them. Each participant
-will receive 24 sessions in 6 weeks (4 sessions per week). Each session
-will be an independent conversation with our chatbot for 15 minutes. A
-staff member will do weekly 15-min check-in phone calls to assess the
-emotional status and potential risks in using AI. We will collect both
+will receive 4 sessions per week for 6 weeks, and each session
+is a conversation with the chatbot for 15 minutes. A
+staff member will do weekly 15-min check-in phone calls to check the
+emotional status and potential risks emerging in completed sessions. We will collect both
 objective data and subjective surveys to assess the feasibility and
-satisfaction. (i) \textbf{Adherence}. We will collect the adherence
-rate, the portion of participants who completed over 80\% of sessions,
-and the engagement degree, the ratio of words spoken by the user. (ii)
+satisfaction: (i) \textbf{Adherence}. We will collect the adherence
+rate (primary), the portion of participants who completed over 80\% of sessions,
+and the engagement degree (secondary), the ratio of words spoken by the user. (ii)
 \textbf{Satisfaction}. Each participant will do a survey after 6
 weeks. The survey will focus on the participants' satisfaction with the
 chatbot, including willingness to use the device in the future,
-emotional influence, opinions on the quality of the chatbot, for
-instance, if the chatbot presents empathy, and high fluency.
+emotional influence, opinions on the specific features of the chatbot, for
+instance, the emotion responses, and speech fluency.
 
 \textbf{Impact}. Our team is highly interdisciplinary, comprising a
 statistician, a neurologist, and computer scientists in trial
@@ -156,10 +156,12 @@ exploitation, or emotional distress) during home use.
 \textbf{Clinical Innovation: Translating human-delivered intervention to AI-based conversational system.}
 AI-CONECT is innovative in directly translating a proven, interviewer-led dementia prevention intervention into a protocol-faithful, AI-delivered system tailored for socially isolated older adults. This systematic translation enables high-fidelity automation of the intervention, thereby opening a new paradigm for scaling evidence-based conversational intervention.
 
-\textbf{Technology Innovation 1: Accelerating cohort-oriented development of AI chatbots via data-driven simulation.} 
-Developing an AI chatbot for a cohort with specific needs (e.g., socially isolated older adults with mild cognitive impairment (MCI)) is limited by scarce data, high evaluation cost, and the risk of deploying immature designs. We introduce a data-driven simulation framework to model cohort-typical language and engagement behaviors and to stress-test candidate chatbot behaviors \emph{before} involving older adults. Unlike previous simulation methods~\cite{wang2024patient}, our method is grounded in recorded I-CONECT conversations (enabling us to capture unique MCI traits) and intervention goals (e.g., engagement and reminiscence). This approach refines and extends existing chatbot development methods by adding quantitative, intervention-relevant virtual evaluation environment that enable rapid iteration, transparent comparison across versions, and earlier identification of failure modes (e.g., low engagement or protocol drift), thereby reducing development time and risk.
+\textbf{Technology Innovation 1: Cost-effective automatic optimization of AI chatbot via clinical-trial-grounded participant simulation.}
+% \textbf{Technology Innovation 1: Accelerating cohort-oriented development of AI chatbots via data-driven simulation.} 
+Developing an AI chatbot for the specific population (e.g., socially isolated older adults with mild cognitive impairment (MCI)) is limited by scarce data, high evaluation cost, and the risk of deploying immature designs. We introduce a data-driven simulation framework to model cohort-typical language and engagement behaviors and to stress-test candidate chatbot behaviors \emph{before} involving older adults. Unlike previous simulation methods~\cite{wang2024patient}, our method is grounded in recorded I-CONECT conversations (enabling us to capture unique MCI traits) and intervention goals (e.g., engagement and reminiscence). This approach refines and extends existing chatbot development methods by adding quantitative, intervention-relevant virtual evaluation environment that enable rapid iteration, transparent comparison across versions, and earlier identification of failure modes (e.g., low engagement, protocol drift or safety risks), thereby reducing development time and risk.
 
-\textbf{Technology Innovation 2: User-friendly multi-modality and voice-responsive interaction enhancing engagement.}
+\comm{What barrier are you addressing here? Engaging? Make sure you specify it in Aim page.}
+\textbf{Technology Innovation 2: Enhancing participant engagement via user-friendly multi-modality interaction designs.}
 For socially isolated older adults with MCI, technology burden is a primary barrier to sustained engagement, particularly for systems that assume typing, app navigation, or complex setup.
 When they faces a digital device, their attention can be easily distracted.
 Using proper prompts/cues can effectively draw their attention and stimulate cognitive functions \cite{carey2019behavior}.
@@ -210,6 +212,7 @@ All development or deployments will be carried out in HIPAA-compliant servers to
   \centering
   \includegraphics[width=\textwidth]{figures/dev.png}
 \end{figure}
+\comm{Fig: Need to discuss the check-in call (how to?) and feasibility study in text using the same ID.}
 
 \textbf{(1) Optimizing AI for Protocol Compliance via Learning from Verifiable Feedback.}
 We will customize Large Language Models (LLMs) to implement the I-CONECT intervention strategies. We will first engineer prompts that instruct LLMs to carry out predefined tasks, including proposing chat themes and topics, and presenting topic-related images. To enhance LLM's capability in engaging users in 15-min conversations, we will improve the conversation engagement using heuristics and data from the I-CONECT trials. On the one hand, we will consult interviewers and related researchers (from I-CONECT team) to provide heuristic conversation strategies and encode the heuristics in the instructions for LLMs. On the other hand, we will \textit{supervised-finetune} the LLMs to learn the spontaneous language patterns, for example, the active use of filler words, from interviewers' speech in the I-CONECT conversation data. The conversation data will be processed from audio recordings, and we will develop speaker-aware Automatic Speech Recognition to extract high-quality text data for LLMs finetuning.
@@ -521,28 +524,60 @@ allowed'' designation.
 \section{POTENTIAL Risks AND ALTERNATIVE STRATEGIES}
 
 The project
-faces four main risks with corresponding alternative strategies:
-\textbf{Risk 1} concerns the insufficient quality of I-CONECT audio data
-for ASR and LLM fine-tuning, which will be mitigated by employing
-advanced data augmentation and noise reduction, leveraging pre-trained
-domain-specific models, and shifting emphasis to extensive prompt
-engineering if necessary. \textbf{Risk 2} addresses the challenge of low
-recruitment or poor adherence among older adults in the human survey
-(Aim 2), which will be countered by utilizing existing collaborations
-through the ADRC and AITC, simplifying the protocol (brief sessions,
-provided tablet), and employing staged recruitment with early feedback.
-\textbf{Risk 3} involves safety and trustworthiness concerns regarding
-the LLM\textquotesingle s potential to generate harmful or non-factual
-content, which will be managed through robust pre- and post-generation
-content filtering, implementing limited, privacy-preserving memory
-management, and integrating an in-app reporting mechanism for real-time
-feedback. Finally, \textbf{Risk 4} is the difficulty in achieving
-human-level conversational engagement, which will be addressed through
-iterative fine-tuning guided by virtual testing metrics like "Word
-Ratio" and digital twin satisfaction, post-survey algorithmic
-adjustments based on human feedback on empathy and stimulation, and
-potentially exploring a human-in-the-loop hybrid approach in future work
-if AI-only engagement proves insufficient.
+faces additional risks that are not fully resolved by the above approach,
+with corresponding alternative strategies:
+\textbf{(1) Poor infrastructure or environment conditions.} In real-world
+home conditions (e.g., intermittent connectivity, background noise, device
+microphone/speaker failures, or latency that disrupts turn-taking), usability and session completion could be reduced. As
+alternatives, we will implement a more efficient conversation flow that can
+operate with lower bandwidth (longer pause between turns allowing more time for caching data), provide
+rapid device health checks and remote troubleshooting, and maintain spare
+devices for swap-out.
+\textbf{(2) Device malfunctioning}. Device could be lost, damaged, or malfunctioning during the study, which could lead to missing data and reduced adherence. As alternatives, we will maintain spare devices for swap-out, provide rapid remote troubleshooting, and implement regular device health checks to identify issues early.
+\textbf{(3) LLM/API server downtime or rate limiting}. Dependence on third-party API services could lead to interruptions in chatbot availability due to server downtime or rate limiting, which could affect session completion and user experience. As alternatives, we will monitor API status continuously, implement caching strategies to handle temporary outages, and maintain a contingency plan to switch to alternative services or local models if necessary.
+\textbf{(4) Model and platform drift} during the project
+(e.g., changes in third-party model behavior, pricing, rate limits, or
+content policies) could cause regressions in protocol compliance,
+engagement, or latency. As alternatives, we will pin model versions when
+possible, maintain an automated regression test suite based on the virtual
+benchmarks, and keep a contingency path to switch to an alternative model
+or a smaller on-premise model for core dialogue behaviors if external
+dependencies become unstable.
+\textbf{(5) Reluctance to use an always-listening voice system} due to
+privacy perceptions (e.g., concerns about recording, surveillance, or data
+sharing) could limit participation even if the system is technically
+HIPAA compliant. As alternatives, we will strengthen transparency and
+participant control by (i) clearly communicating what is captured and for
+how long, (ii) minimizing data retention by default (store transcripts and
+derived features when feasible rather than raw audio), and (iii) providing a
+participant-facing privacy control (e.g., an explicit ``pause''/``mute''
+feature and opt-out choices for storage).
+
+
+% The project
+% faces four main risks with corresponding alternative strategies:
+% \textbf{Risk 1} concerns the insufficient quality of I-CONECT audio data
+% for ASR and LLM fine-tuning, which will be mitigated by employing
+% advanced data augmentation and noise reduction, leveraging pre-trained
+% domain-specific models, and shifting emphasis to extensive prompt
+% engineering if necessary. 
+% \textbf{Risk 2} addresses the challenge of low
+% recruitment or poor adherence among older adults in the human survey
+% (Aim 2), which will be countered by utilizing existing collaborations
+% through the ADRC, simplifying the protocol (brief sessions,
+% provided tablet), and employing staged recruitment with early feedback.
+% \textbf{Risk 3} involves safety and trustworthiness concerns regarding
+% the LLM\textquotesingle s potential to generate harmful or non-factual
+% content, which will be managed through robust pre- and post-generation
+% content filtering, implementing limited, privacy-preserving memory
+% management, and integrating an in-app reporting mechanism for real-time
+% feedback. Finally, \textbf{Risk 4} is the difficulty in achieving
+% human-level conversational engagement, which will be addressed through
+% iterative fine-tuning guided by virtual testing metrics like "Word
+% Ratio" and digital twin satisfaction, post-survey algorithmic
+% adjustments based on human feedback on empathy and stimulation, and
+% potentially exploring a human-in-the-loop hybrid approach in future work
+% if AI-only engagement proves insufficient.
 
 \section{IMPACT}
 
