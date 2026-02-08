@@ -10,62 +10,58 @@ accompanied by restricted patient eligibility and significant treatment
 burden with cost-effectiveness concerns\cite{mangalagiu2025pharmacological}. 
 Thus, it is important to develop accessible and affordable prevention strategies early in the disease course.
 
-\textbf{Critical Barriers.} Though social isolation is a recognized, modifiable
+\textbf{Critical Barriers.} Social isolation is a recognized, modifiable
 risk factor for cognitive decline and dementia in older adults
 \cite{evans2019social,kallianpur2023weak,nasem2020social,penninkilampi2018association,poey2017social,shen2022associations}, effective interventions that can deliver sustained, high-fidelity social engagement at the population scale remain limited.
-The I-CONECT clinical trial (NCT02871921) provides evidence that
-semi-structured conversational engagement with cognitive stimulation can mitigate social isolation and cognitive decline among socially isolated older adults with Mild Cognitive Impairment (MCI) \cite{dodge2024internet}. Yet, human-delivered programs are constrained by workforce availability and high cost, rendering a persistent barrier to broad dissemination.
+The recent clinical trial (I-CONECT; NCT02871921) proved that
+semi-structured conversational engagement with cognitive stimulation can mitigate social isolation and cognitive decline among socially isolated older adults with Mild Cognitive Impairment (MCI)\cite{dodge2024internet}. Yet, \textit{human-delivered intervention is constrained by workforce availability and high cost}, rendering a persistent barrier to broad dissemination.
+Facing the challenge, conversational AI emerges with the potential to provide scalable, on-demand social engagement. 
+Our recent preliminary study\cite{hong2024aconect} showed that Large Language Models (LLMs) can be customized to engage participants with MCI in simulated textual conversations. 
+However, the system was still under-optimized for engaging older adults: (i) The single-modality conversation has limited interactivity and thereby low engagement compared to human-led ones; (ii) Older adults faces technical barriers to operate computers to use the AI; (iii) The safety of AI for older adults is unknown, which may lead to concerns in use.
+Importantly, the feasibility of using AI among the targeted population is unknown. 
 
 \textbf{Solutions.} To enhance the accessibility and affordability of
-the I-CONECT intervention, we propose to develop an AI-led
-conversational intervention (AI-CONECT) by leveraging advanced
-Generative AI to simulate the human-delivered I-CONECT conversational
-intervention. Following the I-CONECT intervention, the AI chatbot will
-provide similar conversation strategies to engage participants and stimulate their cognitive functions. 
+the I-CONECT intervention, we propose to develop an Conversational AI with Multimodal Interaction (AIMI-CONECT) by leveraging advanced
+Generative AI to simulate the human-delivered conversational engagement (I-CONECT). 
+% Following the I-CONECT intervention, the AI chatbot will
+% provide similar conversation strategies to engage participants and stimulate their cognitive functions. 
 % The chatbot will be installed with an multi-modality interface that minimizes the gap to human interactions by using real-time voice input/output and visual emotion responses.
-Our preliminary result\cite{hong2024aconect} has shown that Large Language Models (LLMs) can be customized to increase participants' (with MCI) engagement in
-simulated conversations. However, the system was under-optimized for engaging older adults: limited number of participants, limited modality or device adaptation for a technique-unfamiliar population. Moreover, the
-feasibility of the AI-led intervention has not been evaluated among the
-targeted population yet. Thus, our specific aims in this proposal are:
+To address the limitations in our preliminary study\cite{hong2024aconect}, our specific aims are:
 
-\textbf{Aim 1: Develop a user-friendly multi-modality social chatbot
-system (AI-CONECT) for executing the I-CONECT intervention.} We will
-develop the chatbot for two design goals. (i) \textbf{Protocol
-compliance}: We will use an agentic design to enable the AI chatbot to
-follow the I-CONECT protocol: execute semi-structured conversations, engage participants in reminiscence and vocabulary enhancement. (ii) \textbf{Usability}: To reduce the use
-barrier for older adults, we will integrate real-time responsive voice interface with visual
-emotion-responsive interaction\cite{zhao2025transferring}. The whole system will be deployed on an older-adult-friendly tablet paired with an emotion-aware social robot
-that provides real-time affective feedback. 
-(iii) \textbf{Safety}: Limited awareness of AI risks may place older adults at higher risk when using AI systems. We will adopt real-time guardrails on the conversation to
-monitor critical situations like low emotion, suicide, misinformation,
-or financial risks\cite{xiang2024guardagent}.
+\textbf{Aim 1: Develop a user-friendly conversational AI with multi-modality interaction (AIMI-CONECT) for executing the I-CONECT intervention.} 
+We will use an agentic AI system driven by an LLM to follow the I-CONECT protocol.
+% : execute semi-structured conversations, engage participants in reminiscence and vocabulary enhancement. 
+(i) \textbf{Multi-modality interaction} augments user engagement by human-AI collaborative recreation and exploration of 3D reminiscence scene, voice chat and visual affective responses\cite{zhao2025transferring}.
+Novel machine learning algorithms will be used to optimize the language engagement of LLMs on I-CONECT conversations.
+(ii) \textbf{Usability}: To reduce the use barrier for older adults, we will integrate real-time and responsive audio interface without typing or frequent button presses, and deploy the system on an ready-to-go tablet. 
+(iii) \textbf{Safety}: We will adopt real-time in-conversation guardrails to
+monitor critical situations like negative emotion, suicide intention, etc.
 
-\textbf{Aim 2: Conduct a feasibility and satisfaction survey among 40
+\textbf{Aim 2: Conduct a feasibility study among 40
 socially isolated older adults (age $\geq$ 75) with MCI or normal
-cognition to evaluate the chatbot and identify areas for future
-improvement.} We will recruit participants to use our chatbot for
-intervention and conduct a brief survey among them. Each participant
-will receive 4 sessions per week for 6 weeks, and each session
-is a conversation with the chatbot for 15 minutes. A
-staff member will do weekly 15-min check-in phone calls to check the
-emotional status and potential risks emerging in completed sessions. We will collect both
-objective data and subjective surveys to assess the feasibility and
-satisfaction: (i) \textbf{Adherence}. We will collect the adherence
-rate (primary), the portion of participants who completed over 80\% of sessions,
-and the engagement degree (secondary), the ratio of words spoken by the user. (ii)
-\textbf{Satisfaction}. Each participant will do a survey after 6
-weeks. The survey will focus on the participants' satisfaction with the
-chatbot, including willingness to use the device in the future,
-emotional influence, opinions on the specific features of the chatbot, for
-instance, the emotion responses, and speech fluency.
+cognition to evaluate the AI and identify areas for refinement.}
+We will recruit participants to use our chatbot and complete brief
+surveys. Each participant will receive 24 sessions in 6 weeks (4
+sessions per week). Each session will be an independent 15-minute
+conversation with the chatbot. A staff member will complete weekly
+15-minute check-in phone calls to assess emotional status and potential
+risks in using AI. We will collect both objective data and subjective
+surveys to assess feasibility, acceptability, and safety. (i)
+\textbf{Adherence}. We will collect the adherence rate, the proportion of
+participants who complete $\geq$80\% of sessions, and an engagement
+measure (participant word ratio). (ii) \textbf{Acceptability}. Each
+participant will complete a survey after 6 weeks that assesses
+satisfaction, willingness to use the device in the future, perceived
+empathy, and preferences in interaction modality.
 
-\textbf{Impact}. Our team is highly interdisciplinary, comprising a
-statistician, a neurologist, and computer scientists in trial
-design/analytics, all with extensive experience in AD research. This R21
-is especially timely, addressing the growing demand for complementary
-alternatives to traditional human-led interventions. If feasible and
-successful, it will greatly increase the scalability of early dementia
-intervention for socially isolated older adults.
+\textbf{Impact}. Our team is highly interdisciplinary, comprising
+computer scientists, a neurologist, and a statistician in study design and
+analytics, all with extensive experience in Alzheimer's disease
+research. This proposed project is especially timely,
+addressing the growing demand for complementary alternatives to
+traditional human-led interventions. If feasible and acceptable,
+AI-CONECT will enable scalable conversational engagement for socially
+isolated older adults and inform future, large-scale studies.
 
 
 \cleardoublepage
@@ -501,8 +497,7 @@ of score variability and detection of potential ceiling or floor
 effects. The allocation of \textbf{20 participants per cognitive
 subgroup} further allows acceptability to be summarized separately for
 MCI and cognitively normal older adults, enabling identification of
-subgroup-specific usability or burden concerns, while remaining
-explicitly \textbf{not powered for formal between-group comparisons}.
+subgroup-specific usability or burden concerns.
 This precision-based justification aligns with the feasibility and
 acceptability aims of the study and supports clear go/no-go decisions
 for refinement and future trials, consistent with the exploratory intent
@@ -520,6 +515,8 @@ sufficient precision to evaluate adherence-based feasibility and user
 satisfaction, while remaining consistent with the exploratory and
 developmental intent of the mechanism and the ``clinical trial not
 allowed'' designation.
+
+\comm{Add usability survey to understand which design is essential for engaging etc.}
 
 \section{POTENTIAL Risks AND ALTERNATIVE STRATEGIES}
 
