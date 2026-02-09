@@ -125,30 +125,14 @@ This approach refines and extends existing AI development methods by adding a qu
 The intervention protocol is adapted from I-CONECT~\cite{dodge2024internet} to fit the AI-based intervention.
 Each session will last 15 minutes and follow the conversation flow, starting with a greeting and image/topic presentation, followed by open conversation in which reminiscence and vocabulary enhancement are executed spontaneously.
 (1) \textit{Image and Language Prompting for Critical Thinking}. We adopt the same image and language prompts as I-CONECT to stimulate participants' interests and cognitive function. The participant will be prompted with in-depth questions centered on the topics from the I-CONECT study.
-% \comm{How to prompt critical thinking?}
 (2) \textit{Reminiscence with Visual interactions}. We will engage participants in reminiscence by asking
 about their personal experiences related to the presented images and topics. With the AI tools, the participants will engage in generating personalized 3D scenes based on the conversation and AI memory from prior sessions.
 (3) \textit{Vocabulary Enhancement with Hints}. We will prompt the participants to describe the presented images in detail to enhance their vocabulary usage. AI will guide the participants to describe specific details by providing visual hints, e.g., zooming in on image parts.
-% strategy addresses two main principles: (1)
-% \emph{\ul{Cognitively-Demanding Conversation Strategies}}: This includes
-% engaging users in novel chat experiences to stimulate their cognitive
-% functions, which may enhance brain connectivity and resist
-% neurodegeneration. Strategies of engaging includes providing visual
-% information, novel chat themes and cognitively-demanding topics to
-% stimulate users' cognitive activities. (2) \emph{\ul{User-Friendly
-% Device}}: Frequent engagement essentials the accessibility of the
-% service. Thus, we will design a user-friendly device that lowers the
-% barrier for technologically challenged older adults to use the service
-% at any time. Data privacy is also emphasized to build trust with users
-% and comply with regulations like HIPAA. Overall, these strategies aim to
-% provide cognitive benefits through interactive and engaging
-% conversations tailored to the needs and capabilities of socially
-% isolated older adults.
 (4) \textit{Safety Assurance}. In contrast to the human-delivered protocol, we add safety assurance to define prohibited behaviors that should be avoided in conversations, for example, generating misinformation, financial advice, or harmful content.
 
 \textbf{C.2 System Design with Multimodal Interaction.} 
 
-The system is composed of three main modules: (1) A trained Chat LLM that is responsible for handling the conversation in text; (2) A multimodal interface rounte input from users (MCI/NC older users) to the Chatb LLM. (3) Backend processing includes safety monitoring and 3D generations are executed asynchronically to avoid blocking real-time interaction.
+The system is composed of three main modules: (1) A trained Chat LLM that is responsible for handling the conversation in text; (2) A multimodal interface that routes input from users (MCI/NC older users) to the Chat LLM; (3) Backend processing includes safety monitoring, and 3D generation that will be executed asynchronously to avoid blocking real-time interaction.
 
 \textbf{(1) Voice interface.}
 To enhance the accessibility of the chatbot for older adults, we will implement a voice-forward interface that enables natural spoken interaction. Specifically, user speech will be captured through an on-device microphone and converted to text using streaming speech-to-text (STT), so the dialogue manager can apply the I-CONECT conversation strategies in real time. The chatbot's responses will be produced as text and then rendered as natural-sounding speech via text-to-speech (TTS), allowing participants to engage without typing or reading long on-screen messages.
@@ -162,21 +146,21 @@ We will primarily use the OpenAI Realtime API to support low-latency, bidirectio
   \vspace{-1.2\baselineskip}
 \end{wrapfigure}
 \textbf{(2) 3D Memory Scene Collaborative Recreation.}
-To enhance the reminiscence and engagement, we will implement a user-AI collaborative 3D scene recreation system. Our preliminary work showed that the 3D scene creation can improve the participants' interest in using reminiscence chatbot\cite{kononovych2025visual}.
-During conversations, the chatbot will prompt participants to describe specific details of their memory associated with the presented images (e.g., ``Can you tell me what this picture remind you of?''). Based on the participant's descriptions, the system will generate a personalized 3D scene that visually represents their memories and experiences related to the image. This process allows participants to actively engage in the reminiscence process, while also providing visual cues that can stimulate further conversation and cognitive activity. The 3D scenes will be generated asynchronously to ensure that they do not disrupt the real-time flow of conversation.
+To enhance reminiscence and engagement, we will implement a user-AI collaborative 3D scene recreation system. Our preliminary work showed that 3D scene creation can improve participants' interest in using a reminiscence chatbot\cite{kononovych2025visual}.
+During conversations, the chatbot will prompt participants to describe specific details of their memory associated with the presented images (e.g., ``Can you tell me what this picture reminds you of?''). Based on the participant's descriptions, the system will generate a personalized 3D scene that visually represents their memories and experiences related to the image. This process allows participants to actively engage in reminiscence while also providing visual cues that can stimulate further conversation and cognitive activity. The 3D scenes will be generated asynchronously to ensure that they do not disrupt the real-time flow of conversation.
 
 
 \textbf{(3) Safety Assurance via Real-time Monitoring.}
-To manage the safety risks arising at deployment, we will create real-time safety guardrails that leverages LLMs to monitor the conversations and detect critical situations like low emotion, suicide, misinformation, or financial risks.
-The guardrails will use generative rule-based methods, where an GuardAgent will generate guardrail rules to screen out unsafe generation in conversations\cite{xiang2024guardagent}.
-The monitoring system will send alert to study staff when critical issues are identified.
-Study staff in the loop works as an additional layer of protection via weekly check-in phone calls.
+To manage safety risks arising during deployment, we will create real-time safety guardrails that leverage LLMs to monitor conversations and detect critical situations such as low emotion, suicide, misinformation, or financial risks.
+The guardrails will use generative rule-based methods, where a GuardAgent will generate guardrail rules to screen out unsafe generation in conversations\cite{xiang2024guardagent}.
+The monitoring system will send an alert to study staff when critical issues are identified.
+Study staff in the loop work as an additional layer of protection via weekly check-in phone calls.
 
 \textbf{(4) Device and Emotionally Responsive Robot}: 
-The whole software will be developed using Node.js and pre-installed on a ready-to-go tablet, which will be delivered to participants.
-Alongside the tablet, we will develop a emotionally responsive robot, with real-time facial experessions to provide affective responses.
-The facial expressions are managed by the Chat LLM through function calling -- LLM will generate and send command to the robot on demand.
-The connection between the facial robot and the tablet are established via bluetooth, which can maintain connection robustly.
+The software will be developed using Node.js and pre-installed on a ready-to-go tablet, which will be delivered to participants.
+Alongside the tablet, we will develop an emotionally responsive robot, with real-time facial expressions to provide affective responses.
+The facial expressions are managed by the Chat LLM through function calling; the LLM will generate and send commands to the robot on demand.
+The connection between the facial robot and the tablet is established via Bluetooth, which can maintain a robust connection.
 The robot will be developed based on our consultant Dr. Chen's prior work\cite{zhao2025transferring}.
 % We will develop an old-adult-centered interface and device to facilitate the accessibility of our chatbot service.
 % We will minimize the operation complexities for older adults such that
@@ -185,7 +169,7 @@ The robot will be developed based on our consultant Dr. Chen's prior work\cite{z
 
 
 \textbf{(5) Data privacy and system security.}
-To ensure participants' data privacy and system security, we will implement the following measures. The OpenAI API will be served through HIPAA-compliant servers insight MGH, and all data will be encrypted in transit and at rest. We will minimize the collection of personally identifiable information (PII) and use de-identified data for analysis. Access to the system will be protected by secure authentication, and regular security audits will be conducted to identify and mitigate vulnerabilities. Additionally, we will provide clear information to participants about data usage and obtain informed consent that explicitly addresses privacy and security measures.
+To ensure participants' data privacy and system security, we will implement the following measures. The OpenAI API will be served through HIPAA-compliant servers inside MGH, and all data will be encrypted in transit and at rest. We will minimize the collection of personally identifiable information (PII) and use de-identified data for analysis. Access to the system will be protected by secure authentication, and regular security audits will be conducted to identify and mitigate vulnerabilities. Additionally, we will provide clear information to participants about data usage and obtain informed consent that explicitly addresses privacy and security measures.
 
 
 \begin{wrapfigure}{r}{0.45\textwidth}
@@ -201,15 +185,16 @@ To ensure participants' data privacy and system security, we will implement the 
 
 % \comm{To maintain the best responsiveness, we only train the planning model that runs on the backend. This minimizes the changes in production likes real-time API.}
 % \comm{We will use RLHF to optimize the chatbot to follow the protocol. The reward model will be trained on the feedback of protocol compliance, which is rated by rule-based method. However, direct rating is expensive. Instead, we build simulation system plus LLM as evaluator on the simulated conversation. The simulation fidelity is guaranteed by fine-tuing LLMs on real clinical trial data.}
-We will use RLHF to optimize the chatbot to follow the protocol. The reward model will be constructed based on the I-CONECT protocol, which is rated by rule-based method. However, direct rating is expensive. Instead, we build virtual users to simulate conversations. 
+We will use RLHF to optimize the chatbot to follow the protocol\cite{ouyang2022training}. The reward model, that evaluates the LLM compliance in conversation, will be constructed based on the I-CONECT protocol. However, obtaining conversation data is expensive. Thus, we will build virtual users to simulate conversations. 
 % The simulation fidelity is guaranteed by fine-tuing LLMs on real clinical trial data.
 
 \textbf{(1) Learning to Simulate Human Feedback from I-CONECT Data.}
-The RLHF relies on conversation between the chatbot and real users to collect feedback. However, collecting feedback from real users is costly and risky, especially when the users are socially isolated older adults with MCI. To reduce the cost and risk, we will create virtual users that are LLMs finetuned on old adults' recorded conversations and then simulate conversations with the socially-isolated older adults to quantitatively evaluate the chatbot. The simulation will learn the I-CONECT participants' language traits that may drive the engagement designs. To provide a concrete simulation of older adults with MCI, we will validate that the virtual users can generate similar language symptoms that have been proven effective for MCI diagnosis \cite{hoang2023subject}. 
+RLHF relies on conversations between the chatbot and real users to collect feedback. However, collecting feedback from real users is costly and risky, especially when the users are socially isolated older adults with MCI. To reduce cost and risk, we will create virtual users that are LLMs fine-tuned on older adults' recorded conversations and then simulate conversations with socially isolated older adults to quantitatively evaluate the chatbot. The simulation will learn I-CONECT participants' language traits that may drive the engagement design. To provide a concrete simulation of older adults with MCI, we will validate that the virtual users can generate similar language symptoms that have been proven effective for MCI diagnosis \cite{hoang2023subject}. 
 
 \textbf{(2) Optimizing AI for Protocol Compliance via Learning from Verifiable Feedback.}
-We will customize Large Language Models (LLMs) to implement the I-CONECT intervention strategies. We will first engineer prompts that instruct LLMs to carry out predefined tasks, including proposing chat themes and topics, and presenting topic-related images. To enhance LLM's capability in engaging users in 15-min conversations, we will improve the conversation engagement using heuristics and data from the I-CONECT trials. On the one hand, we will consult interviewers and related researchers (from I-CONECT team) to provide heuristic conversation strategies and encode the heuristics in the instructions for LLMs. On the other hand, we will \textit{supervised-finetune} the LLMs to learn the spontaneous language patterns, for example, the active use of filler words, from interviewers' speech in the I-CONECT conversation data. The conversation data will be processed from audio recordings, and we will develop speaker-aware Automatic Speech Recognition to extract high-quality text data for LLMs finetuning.
-Then, we will train LLMs to learn from the \textit{feedback} on the compliance in conversations. Every time the LLM had a conversation with a user (participant), we will use rule-based method to rate the protocol compliance (engagement time, reminiscence-induction frequency, and user vocabulary). The ratings will be used to train a reward model that guides the LLMs to generate protocol-compliant conversations via Reinforcement Learning with (Human) Feedback (RLVF)\cite{ouyang2022training,yang2025advf}.
+We will customize Large Language Models (LLMs) to implement the I-CONECT intervention strategies. We will first engineer prompts that instruct LLMs to carry out predefined tasks, including proposing chat themes and topics, and presenting topic-related images. To enhance LLMs' capability to engage users in 15-min conversations, we will improve conversation engagement using heuristics and data from the I-CONECT trials. On the one hand, we will consult interviewers and related researchers (from the I-CONECT team) to provide heuristic conversation strategies and encode the heuristics in the instructions for LLMs. On the other hand, we will \textit{supervised fine-tune} the LLMs to learn spontaneous language patterns, for example, the active use of filler words, from interviewers' speech in the I-CONECT conversation data. The conversation data will be processed from audio recordings, and we will develop speaker-aware Automatic Speech Recognition to extract high-quality text data for LLM fine-tuning.
+Then, we will train LLMs to learn from the \textit{feedback} on compliance in conversations. Each time the LLM has a conversation with a user (participant), we will use a rule-based method to rate protocol compliance (engagement time, reminiscence-induction frequency, and user vocabulary). The ratings will be used to train a reward model that guides the LLMs to generate protocol-compliant conversations via Reinforcement Learning with (Human) Feedback (RLVF)\cite{ouyang2022training,yang2025advf}.
+
 
 
 \textbf{C.4 Approach for Feasibility Study.} 
@@ -222,17 +207,14 @@ adherence, happiness, emotional lifting, empathy, and trustworthiness
 provide insights into how to design the chatbot to engage humans and
 increase social interactions.
 
-Each participant will receive 15-min conversation with our chatbot for
-24 sessions in 6 weeks (4 sessions per week). A staff member will do
-weekly 15-min check-in phone calls to assess the emotional status and
+Each participant will receive 15-min conversations with our chatbot for
+24 sessions in 6 weeks (4 sessions per week). A staff member will conduct
+weekly 15-min check-in phone calls to assess emotional status and
 potential risks in using AI.
 In 6 weeks, we will collect both objective data and
 subjective surveys to assess the feasibility and satisfaction.
 
 To isolate the effects of social engagement from confounding factors, the study incorporates three key design elements. (1) First, we employ chatbot persona rotation across participants to enhance interaction variability and minimize emotional bonding confounds, with personas drawn from a pool based on I-CONECT interviewer profiles. (2) Second, our intuitive interface and natural-sounding voice capabilities enable participants lacking internet or webcam proficiency to participate in conversations without additional cognitive burden from technology learning. (3) Third, we leverage the standardized daily themes and image stimuli from I-CONECT to support participants in organizing and expressing their ideas within conversations\cite{dodge2024internet}.
-
-% \comm{Add details about survey. }
-% \comm{Example: Do you change your perception about using AI. Perecentage of attrition..}
 
 \textbf{Participant Recruitment}. We will recruit a total of \textbf{40
 socially isolated older adults aged $\geq75$ years} from the MGH Memory
@@ -240,7 +222,8 @@ Division and the I-CONECT Foundation. The cohort will consist of two
 balanced groups: \textbf{20 individuals with mild cognitive impairment
 (MCI)} and \textbf{20 cognitively normal (NC)} participants.
 
-\textit{Inclusion criteria}: \noindent (1) Aged 75+; (2) Clinical diagnosis of MCI; (3) Identified as socially isolated by one of: (a) Score $\leq 12$ on the 6-item Lubben Social Network Scale (LSNS-6) \cite{lubben2006performance}; (b) Engages in conversations lasting 30 minutes or longer no more than twice per week, per participant self-report; (4) GDS-15 (15-item Geriatric Depression Scale) at/below 9 (not severely depressed) \cite{yesavage1982development}. (5) Answering "Often" to at least one question on the Hughes et al. Three-Item UCLA Loneliness Scale \cite{russell1978developing}. (6) Ability to understand the research consent form. (7) Cognitive status assessed using the Telephone Interview for Cognitive Status (TICS) \cite{fong2009telephone} should be MCI or NC, depending on the group.
+\textit{Inclusion criteria}: \noindent (1) Aged 75+; (2) Clinical diagnosis of MCI; (3) Identified as socially isolated by one of: (a) Score $\leq 12$ on the 6-item Lubben Social Network Scale (LSNS-6) \cite{lubben2006performance}; (b) Engages in conversations lasting 30 minutes or longer no more than twice per week, per participant self-report; (4) GDS-15 (15-item Geriatric Depression Scale) at or below 9 (not severely depressed) \cite{yesavage1982development}. (5) Answering ``Often'' to at least one question on the Hughes et al. Three-Item UCLA Loneliness Scale \cite{russell1978developing}. (6) Ability to understand the research consent form. (7) Cognitive status assessed using the Telephone Interview for Cognitive Status (TICS) \cite{fong2009telephone} should be MCI or NC, depending on the group.
+
 
 \textit{Exclusion criteria}: \noindent (1) Diagnosed with dementia such as AD, ischemic vascular dementia, normal pressure hydrocephalus, or Parkinson's disease. (2) Schizophrenia or other major psychiatric disorder defined by DSM-IV criteria \cite{wilson1994special}. (3) Medications: frequent use of high doses of analgesics; use of sedative medications except for those used occasionally for sleep ($\leq2$ per week); unstable dosing of cholinesterase inhibitors (must be stable for 2 months).
 
@@ -253,7 +236,7 @@ I-CONECT protocol.
 \textbf{Method: Processing I-CONECT Data and Constructing Virtual Users.} We will use the recorded I-CONECT audio conversations to build virtual users of the corresponding participants. All data will be processed on
 HIPAA-compliant servers with identifiers removed.
 
-The whole process include these steps:
+The whole process includes these steps:
 (1) \textbf{Data preprocessing:} Audio will be transcribed using a
   speaker-aware ASR optimized for older adult speech, separating
   interviewer and participant utterances. Transcripts will be aligned
@@ -268,7 +251,6 @@ The whole process include these steps:
   patterns and engagement behaviors, reflecting differences between MCI
   and cognitively normal participants.
 (4) \textbf{Simulation-based evaluation:} The virtual users will simulate
-  \textbf{Simulation-based evaluation:} The virtual users will simulate
   large-scale conversations with the AIMI-CONECT chatbot, enabling
   low-cost testing and controlled experimentation by varying chatbot
   strategies.
@@ -276,16 +258,7 @@ The whole process include these steps:
   rewards based on the I-CONECT protocol, including: (i) \textit{Engagement:} Participant word ratio (participant words/total
     words). (ii) \textit{Reminiscence:} Reminiscence turn ratio (autobiographical turns/total participant turns). (iii) \textit{Vocabulary enhancement:} Lexical richness indices (e.g.,
     type--token ratio). (iv) \textit{Critical thinking:} Frequency of cognitively demanding prompts from the AI.
-  All the turn type justification will be given by prompted LLMs\cite{zheng2023judging}.
-
-% \textbf{Iterative optimization:} Simulation results will guide
-% successive optimization cycles, revising chatbot parameters that fail to
-% meet engagement or reminiscence thresholds. Only validated chatbot
-% configurations will advance to human testing.
-
-% Collectively, Aim 1 establishes a rigorous, data-driven method for
-% translating the I-CONECT intervention protocol into a scalable, AI-based
-% conversational system while minimizing risk prior to human deployment.
+  All turn-type justifications will be provided by prompted LLMs\cite{zheng2023judging}.
 
 \textbf{Aim 2}: We will conduct a survey to evaluate the feasibility of using AI as an alternative to human-led delivery.
 
@@ -347,29 +320,21 @@ acceptability aims of the study and supports clear go/no-go decisions
 for refinement and future trials, consistent with the exploratory intent
 of the R21 mechanism.
 
-\textbf{Exploratory Outcomes.} Cognitive assessments will be collected for exploratory and descriptive purposes only. Additional survey will be collected to understand the participants' preferences for the different compoents in the system design, to inform the future design.
-% Instead, these measures will be used to evaluate feasibility of
-% remote assessment, completion rates, and data quality, and to generate
-% preliminary signals to inform the design of future trials.
+\textbf{Exploratory Outcomes.} Cognitive assessments will be collected for exploratory and descriptive purposes only. Additional surveys will be collected to understand participants' preferences for the different components in the system design, to inform future design.
 
-% In summary, a total sample size of \textbf{20 MCI and 20 NC
-% participants} is well-suited to the goals of this R21 by providing
-% sufficient precision to evaluate adherence-based feasibility and user
-% satisfaction.
-
-\section{POTENTIAL Risks AND ALTERNATIVE STRATEGIES}
+\section{POTENTIAL RISKS AND ALTERNATIVE STRATEGIES}
 
 The project
 faces additional risks that are not fully resolved by the above approach,
 with corresponding alternative strategies:
-\textbf{(1) Poor infrastructure or environment conditions.} In real-world
+\textbf{(1) Poor infrastructure or environmental conditions.} In real-world
 home conditions (e.g., intermittent connectivity, background noise, device
 microphone/speaker failures, or latency that disrupts turn-taking), usability and session completion could be reduced. As
 alternatives, we will implement a more efficient conversation flow that can
-operate with lower bandwidth (longer pause between turns allowing more time for caching data), provide
+operate with lower bandwidth (longer pauses between turns allowing more time for caching data), provide
 rapid device health checks and remote troubleshooting, and maintain spare
 devices for swap-out.
-\textbf{(2) Device malfunctioning}. Device could be lost, damaged, or malfunctioning during the study, which could lead to missing data and reduced adherence. As alternatives, we will maintain spare devices for swap-out, provide rapid remote troubleshooting, and implement regular device health checks to identify issues early.
+\textbf{(2) Device malfunctioning}. Devices could be lost, damaged, or malfunctioning during the study, which could lead to missing data and reduced adherence. As alternatives, we will maintain spare devices for swap-out, provide rapid remote troubleshooting, and implement regular device health checks to identify issues early.
 \textbf{(3) LLM/API server downtime or rate limiting}. Dependence on third-party API services could lead to interruptions in chatbot availability due to server downtime or rate limiting, which could affect session completion and user experience. As alternatives, we will monitor API status continuously, implement caching strategies to handle temporary outages, and maintain a contingency plan to switch to alternative services or local models if necessary.
 % \textbf{(4) Model and platform drift} during the project
 % (e.g., changes in third-party model behavior, pricing, rate limits, or
@@ -389,31 +354,6 @@ devices for swap-out.
 % participant-facing privacy control (e.g., an explicit ``pause''/``mute''
 % feature and opt-out choices for storage).
 
-
-% The project
-% faces four main risks with corresponding alternative strategies:
-% \textbf{Risk 1} concerns the insufficient quality of I-CONECT audio data
-% for ASR and LLM fine-tuning, which will be mitigated by employing
-% advanced data augmentation and noise reduction, leveraging pre-trained
-% domain-specific models, and shifting emphasis to extensive prompt
-% engineering if necessary. 
-% \textbf{Risk 2} addresses the challenge of low
-% recruitment or poor adherence among older adults in the human survey
-% (Aim 2), which will be countered by utilizing existing collaborations
-% through the ADRC, simplifying the protocol (brief sessions,
-% provided tablet), and employing staged recruitment with early feedback.
-% \textbf{Risk 3} involves safety and trustworthiness concerns regarding
-% the LLM\textquotesingle s potential to generate harmful or non-factual
-% content, which will be managed through robust pre- and post-generation
-% content filtering, implementing limited, privacy-preserving memory
-% management, and integrating an in-app reporting mechanism for real-time
-% feedback. Finally, \textbf{Risk 4} is the difficulty in achieving
-% human-level conversational engagement, which will be addressed through
-% iterative fine-tuning guided by virtual testing metrics like "Word
-% Ratio" and digital twin satisfaction, post-survey algorithmic
-% adjustments based on human feedback on empathy and stimulation, and
-% potentially exploring a human-in-the-loop hybrid approach in future work
-% if AI-only engagement proves insufficient.
 
 \section{IMPACT}
 
