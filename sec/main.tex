@@ -39,13 +39,7 @@ sessions per week). Each session will be an independent 10-minute
 conversation with the chatbot. A staff member will complete weekly
 15-minute check-in phone calls to assess emotional status and potential
 risks in using AI. We will collect both objective data and subjective
-surveys. (i)~\textit{Adherence}. We will collect the adherence rate, the proportion of
-participants who complete $\geq$80\% of sessions, and an engagement
-measure (participant word ratio). (ii) \textit{Acceptability}. Each
-participant will complete a survey after 6 weeks that assesses
-satisfaction with the whole program, willingness to use the device in the future, and preferences for interaction modality or other system features.
-\comm{safety?}
-\comm{How about recruitment ratio? how many were contacted and how many joined the study. ---  the hesiation to talk with AI -bot can be a concern (among reviewers) }
+surveys: recruitment ratio (ratio of contacted to enrolled participants), adherence rate (the proportion of participants who complete $\geq$80\% of sessions), user engagement level (participant's word ratio in a conversation), and user satisfaction (Client Satisfaction Questionnaire--8, CSQ-8)\cite{phenx2026client}. We will also collect surveys to understand participants' concerns and preferences for the different components and security in the system design, to inform future design.
 
 \textbf{Impact}. Our team is highly interdisciplinary, comprising
 computer scientists, a neurologist, a gerontologist, and a statistician in study design and
@@ -58,6 +52,8 @@ adults with limited social interaction and inform future, large-scale studies.
 
 
 \cleardoublepage
+\textbf{Research Strategy}
+
 \section{Significance}
 
 Alzheimer's disease and related dementias (ADRD) is a world-wide disease yet difficult to treat, because available pharmacologic options are limited by side effects, high cost, and restricted eligibility for newer disease-modifying therapies\cite{zhang2024recent}. 
@@ -77,8 +73,10 @@ In response to this challenge, the emergence of conversational AI driven by Larg
 The estimated cost reduction is significant: based on OpenAI GPT-4o pricing (July 2024
 \cite{openai2024pricing}), a twice-per-week, one-year service would cost
 0.3\% of an estimated human-delivered service cost, based on 2024 salary estimates\cite{ziprecruiter2024chat,hong2024aconect}.
-\textbf{Despite the promise, most currently available conversational AI systems lack a scientific basis and an evidence-based, efficacy-proven approach to address cognitive function.}
-As an early attempt to apply conversational AI to an intervention, our prior work customized LLMs to follow the NIH-funded efficacy-proven I-CONECT conversational interaction protocol via prompt engineering\cite{hong2024aconect}; however, it has multiple limitations:
+% However, effects remain mixed and early, with several studies emphasizing usability or short-term outcomes rather than long-term, protocol-based intervention delivery in the intended high-risk population.
+\textbf{Despite the promise, most currently available conversational AI systems lack a scientific basis and an evidence-based, efficacy-proven approach address cognitive decline by executing an intervention as an interviewer.}
+Prior chatbot-based intervention studies in older adults have shown feasibility and acceptability as an assistant (rather than an interviewer or therapist) in web-based problem solving, daily cognitive training, and simple memory training\cite{bennion2020usability,kramer2022embodied,lee2021smartphone,tokunaga2021dialogue,wianto2021chattybot}.
+As an early attempt, our prior work customized LLMs to follow the NIH-funded efficacy-proven I-CONECT conversational interaction protocol via prompt engineering\cite{hong2024aconect}; however, it has multiple limitations:
 (i) The single-modality conversation has limited interactivity and thereby lowers engagement compared to human-led ones; 
 (ii) Older adults face technical barriers to operating computers and accessing the AI service, which may lead to low adherence; 
 (iii) The intervention protocol was not adapted to AI, ignoring the unique challenges of AI-based intervention, for example, the potential safety risks and the protocol drift (failure to maintain protocol fidelity) during conversations\cite{zou2023universal,arike2025goaldrift}.
@@ -89,13 +87,9 @@ When older adults have limited social interaction and are less likely to have be
 This project directly addresses the scalability barrier by translating the
 evidence-based I-CONECT conversational protocol into an AI-delivered
 system with multimodal interaction (AIMI-CONECT) designed for older adults. 
-If successful, this project will shift the field from
-workforce-limited conversational interventions to protocol-faithful, accessible, and on-demand delivery that can be disseminated at scale.
-\emph{Scientifically}, the project will improve knowledge of conversational intervention by evaluating whether
-AI-based conversational intervention is feasible in older adults with limited social interaction (the population group that beneifts most from this type of behavioral intervention\cite{dodge2024internet,wu2024who}) and MCI or normal cognition.
-\emph{Technically}, it will advance the state of AI-based conversational
-interventions by directly addressing key challenges:
-maintaining protocol compliance and usability, and enhancing engagement during extended sessions through multimodal interaction.
+If successful, this project will shift the field from workforce-constrained conversational interventions to accessible, and scalable delivery.
+Technically, Aim 1 will directly address key technical challenges and therefore advance the state of AI-based conversational interventions.
+Aim 2 will help understand whether AI-based conversational intervention is feasible in older adults with limited social interaction (the population group that beneifts most from this type of behavioral intervention\cite{dodge2024internet,wu2024who}) and MCI or normal cognition.
 \emph{Clinically}, it will pave the way for the use of AI in future behavioral interventions.
 
 \section{INNOVATION}
@@ -104,7 +98,7 @@ maintaining protocol compliance and usability, and enhancing engagement during e
 AIMI-CONECT translates an efficacy-proven, interviewer-led dementia prevention intervention into a protocol-faithful, scalable AI-delivered system tailored for older adults with limited social interaction. This systematic translation adapts the I-CONECT protocol for AI delivery, addresses emergent safety risks, and evaluates feasibility to enable high-fidelity automation of future intervention delivery.
 
 \textbf{Multimodal interaction enabled conversational AI system improving usability and engagement.} 
-To mitigate the gap between human and AI engagement, particularly the gap caused by the low usability \comm{Hiroko suggest to change to "engagement". But need to rethink.} for older adults, AIMI-CONECT integrates multimodal interaction into the conversational system: (1) a \emph{voice}-forward interface (real-time speech input/output); (2) visual affective robot; (3) user-AI co-recreation of reminiscence 3D scene via conversational instructions. 
+To mitigate the gap between human and AI-led interaction, particularly the gap causing low engagement for older adults, AIMI-CONECT integrates multimodal interaction into the conversational system: (1) a \emph{voice}-forward interface (real-time speech input/output); (2) visual affective robot; (3) user-AI co-recreation of reminiscence 3D scene via conversational instructions. 
 Compared with conventional chat interfaces, the compound design lowers operational demands enhancing usability, and enables more engaging conversations aligned with the I-CONECT goals.
 Unique to this work, the 3D scene recreation allows the participants to actively engage in the reminiscence process as well as detailed item describing with enhanced vocabulary, which are key therapeutic components of the I-CONECT protocol, and thereby may strengthen the cognitive stimulation effects.
 
@@ -113,7 +107,7 @@ We leverage reinforcement learning from human feedback (RLHF)\cite{ouyang2022tra
 Yet, when targeting the specific population (e.g., older adults with limited social interaction and mild cognitive impairment (MCI)), traditional RLHF is limited by scarce data and high cost to collect human feedback.
 Thus, in the project, we introduce a data-driven simulation framework that can generate conversations between LLMs and virtual users that are LLMs fine-tuned on recorded conversations from the I-CONECT clinical trial.
 Unlike previous simulation methods~\cite{wang2024patient}, our method is grounded in clinical-trial data (enabling us to capture unique MCI traits).
-This approach refines and extends existing AI development methods by adding a quantitative, intervention-relevant virtual evaluation environment, thereby enabling rapid iteration and earlier identification of risks.
+This approach extends existing AI development methods by adding a quantitative, intervention-relevant virtual evaluation environment, thereby enabling rapid iteration and earlier identification of risks.
 
 
 \section{Approach}
@@ -128,7 +122,7 @@ Each session will last 15 minutes and follow the conversation flow, starting wit
 (2) \textit{Reminiscence with Visual interactions}. We will engage participants in reminiscence by asking
 about their personal experiences related to the presented images and topics. With the AI tools, the participants will engage in generating personalized 3D scenes based on the conversation and AI memory from prior sessions.
 (3) \textit{Vocabulary Enhancement with Hints}. We will prompt the participants to describe the presented images in detail to enhance their vocabulary usage. AI will guide the participants to describe specific details by providing visual hints, e.g., zooming in on image parts.
-(4) \textit{Safety Assurance}. In contrast to the human-delivered protocol, we add safety assurance to define prohibited behaviors that should be avoided in conversations, for example, generating misinformation, financial advice, or harmful content.
+(4) \textit{Safety Assurance}. In contrast to the human-delivered protocol, we add safety assurance to define prohibited behaviors that should be avoided in conversations, for example, illegal content or financial advice.
 
 \textbf{C.2 System Design with Multimodal Interaction.} 
 
@@ -173,10 +167,10 @@ To ensure participants' data privacy and system security, we will implement the 
 
 
 \begin{wrapfigure}{r}{0.45\textwidth}
-  % \vspace{-0.8\baselineskip}
+  \vspace{-1.8\baselineskip}
   \centering
   \includegraphics[width=\linewidth]{figures/train.png}
-  \vspace{-1.6\baselineskip}
+  \vspace{-2.6\baselineskip}
 \end{wrapfigure}
 
 
@@ -230,69 +224,60 @@ We adopt the same operational criteria used in the original NIH-funded I-CONECT 
 
 \section{DATA PROCESSING AND ANALYSES}
 
-\textbf{Aim 1}: We will use I-CONECT recorded conversations to evaluate
-and optimize the chatbot design for better implementation of the
-I-CONECT protocol.
+\textbf{Aim 1}: We will use I-CONECT recorded conversations to optimize the chatbot design for better compliance with the I-CONECT protocol.
 
 \textbf{Method: Processing I-CONECT Data and Constructing Virtual Users.} We will use the recorded I-CONECT audio conversations to build virtual users of the corresponding participants. All data will be processed on
-HIPAA-compliant servers with identifiers removed.
-
+HIPAA-compliant servers with personal identifiable information removed.
 The whole process includes these steps:
-(1) \textbf{Data preprocessing:} Audio will be transcribed using a
+(1) \textit{Transcription:} Audio will be transcribed using a
   speaker-aware ASR optimized for older adult speech, separating
-  interviewer and participant utterances. Transcripts will be aligned
-  with metadata, and quality checked manually and automatically.
-(2) \textbf{Annotation and feature extraction:} We will extract
-  conversational and linguistic features (e.g., word counts, lexical
-  diversity, reminiscence markers) from transcripts. A subset will be
-  manually annotated for reminiscence and cognitively demanding prompts.
-(3) \textbf{Virtual user construction:} We will create LLM-based "virtual
-  users" of older adult participants by fine-tuning models on aggregated
-  participant data (not verbatim transcripts) to simulate their language
-  patterns and engagement behaviors, reflecting differences between MCI
-  and cognitively normal participants.
-(4) \textbf{Simulation-based evaluation:} The virtual users will simulate
-  large-scale conversations with the AIMI-CONECT chatbot, enabling
-  low-cost testing and controlled experimentation by varying chatbot
-  strategies.
-(5) \textbf{Reward Modeling:} We will establish quantitative
-  rewards based on the I-CONECT protocol, including: (i) \textit{Engagement:} Participant word ratio (participant words/total
-    words). (ii) \textit{Reminiscence:} Reminiscence turn ratio (autobiographical turns/total participant turns). (iii) \textit{Vocabulary enhancement:} Lexical richness indices (e.g.,
-    type--token ratio). (iv) \textit{Critical thinking:} Frequency of cognitively demanding prompts from the AI.
-  All turn-type justifications will be provided by prompted LLMs\cite{zheng2023judging}.
+  interviewer and participant utterances. 
+(2) \textit{Feature extraction:} We will extract
+  lexical features (e.g., word counts, lexical diversity) from transcripts. 
+(3) \textit{Virtual user construction:} We will create LLM-based "virtual
+  users" of older adult participants by fine-tuning models on transcribed conversations to simulate their language patterns and engagement behaviors. The fidelity of the virtual users will be validated by comparing simulated conversations to real ones, ensuring that key lexical features are preserved.
+% (4) \textbf{Simulation-based evaluation:} The virtual users will simulate
+%   large-scale conversations with the AIMI-CONECT chatbot, enabling
+%   low-cost testing and controlled experimentation by varying chatbot
+%   strategies.
+% (5) \textbf{Reward Modeling:} We will establish quantitative
+%   rewards based on the I-CONECT protocol. The reward will be calculated on simulated conversations: (i) \textit{Engagement:} Participant word ratio (participant words/total
+%     words). (ii) \textit{Reminiscence:} Reminiscence turn ratio (autobiographical turns/total participant turns). (iii) \textit{Vocabulary enhancement:} Lexical richness indices (e.g.,
+%     type--token ratio). (iv) \textit{Critical thinking:} Frequency of cognitively demanding prompts from the AI.
+%   All turn-type justifications will be provided by prompted LLMs\cite{zheng2023judging}.
 
-\textbf{Aim 2}: We will conduct a survey to evaluate the feasibility of using AI as an alternative to human-led delivery.
-
-We will recruit a total of \textbf{40 older adults with limited social interaction
+\textbf{Aim 2}: To evaluate the feasibility of using AI as an alternative to human-led delivery, we will recruit a total of \textbf{40 older adults with limited social interaction
 aged $\geq75$ years}, including \textbf{20 individuals with mild cognitive
 impairment (MCI)} and \textbf{20 cognitively normal (NC)} participants.
-This sample size is designed to support the \textbf{primary aims of
-feasibility and user satisfaction}, rather than to test intervention
-efficacy.
+% This sample size is designed to support the \textbf{primary aims of
+% feasibility and user satisfaction}, rather than to test intervention
+% efficacy.
 
 \textbf{(1) Adherence.} The primary feasibility outcome is
 adherence to the intervention, defined at the participant level as
 completion of \textbf{$\geq80\%$ of scheduled AIMI-CONECT sessions}. A total
 sample size of \textbf{N=40} allows estimation of the overall adherence
-proportion with adequate precision for feasibility assessment. For
-example, assuming an expected adherence rate of approximately
+proportion with adequate precision. For example, assuming an expected adherence rate of approximately
 \textbf{80\%}, N=40 yields a 95\% confidence interval with a half-width
 of approximately \textbf{$\pm 12\%$}, which is sufficient to determine
-whether adherence meets the predefined feasibility threshold. This level
-of precision is appropriate for an R21 feasibility study and supports
-clear \textbf{go/no-go decisions} for future scale-up.\\
+whether adherence meets the predefined feasibility threshold. 
+
 Including \textbf{20 MCI and 20 NC participants} ensures that
 feasibility can be assessed across two cognitively distinct but relevant
 subpopulations. With \textbf{N=20 per group}, adherence rates can be
 estimated separately for MCI and NC participants with acceptable
 precision for feasibility purposes, allowing identification of
 group-specific implementation challenges (e.g., differential session
-completion, technology burden, or need for support) without powering the
-study for between-group efficacy comparisons.
+completion, technology burden, or need for support).
+%  without powering the
+% study for between-group efficacy comparisons.
+
+In addition, \textbf{recruitment ratio}, ratio of contacted to enrolled participants, will be collected during the recruitment process.
+\textbf{User engagement level} will be measured by the participant's word ratio in a conversation, which is the proportion of words spoken by the participant relative to the total words in the conversation. This metric provides insight into how actively participants are engaging with the chatbot during sessions.
 
 \textbf{(2) Acceptability} of the AIMI-CONECT
 intervention will be evaluated using the Client Satisfaction
-Questionnaire--8 (CSQ-8), a validated measure of user satisfaction for
+Questionnaire-8 (CSQ-8)\cite{phenx2026client}, a validated measure of user satisfaction for
 health and behavioral interventions, with total scores ranging from 8 to
 32 and higher scores indicating greater satisfaction.
 \textbf{Acceptability will be defined a priori using explicit,
@@ -306,22 +291,26 @@ it provides adequate precision to evaluate these criteria without
 hypothesis testing. Specifically, if approximately 70\% of participants
 meet the satisfaction threshold (CSQ-8 $\geq24$), a sample of 40 yields a
 95\% confidence interval with a half-width of approximately
-\textbf{$\pm 14\%$}, allowing us to distinguish between unacceptably low
-satisfaction (e.g., $<55$--$60\%$) and satisfaction levels
-consistent with good acceptability. Similarly, with N=40, the mean CSQ-8
-score can be estimated with sufficient precision to determine whether it
+\textbf{$\pm 14\%$}, allowing us to \textit{distinguish between unacceptably low
+satisfaction} (e.g., $<55$--$60\%$) and satisfaction levels
+consistent with good acceptability. 
+Similarly, with N=40, the \textit{mean CSQ-8 score} can be estimated with sufficient precision to determine whether it
 exceeds the prespecified benchmark of 24, while also allowing assessment
 of score variability and detection of potential ceiling or floor
 effects. The allocation of \textbf{20 participants per cognitive
 subgroup} further allows acceptability to be summarized separately for
 MCI and cognitively normal older adults, enabling identification of
 subgroup-specific usability or burden concerns.
-This precision-based justification aligns with the feasibility and
-acceptability aims of the study and supports clear go/no-go decisions
-for refinement and future trials, consistent with the exploratory intent
-of the R21 mechanism.
+% This precision-based justification aligns with the feasibility and
+% acceptability aims of the study and supports clear go/no-go decisions
+% for refinement and future trials, consistent with the exploratory intent
+% of the R21 mechanism.
 
-\textbf{Exploratory Outcomes.} Cognitive assessments will be collected for exploratory and descriptive purposes only. Additional surveys will be collected to understand participants' preferences for the different components in the system design, to inform future design.
+We will also collect surveys to understand participants' concerns and preferences for the different components and security in the system design, to inform future design.
+
+\textbf{Exploratory Outcomes.} 
+Other outcomes will be collected as supplementary information to inform future design and trials.
+Cognitive assessments will be collected for exploratory and descriptive purposes only. Additional surveys will be collected to understand participants' preferences for the different components in the system design, to inform future design.
 
 \section{POTENTIAL RISKS AND ALTERNATIVE STRATEGIES}
 
@@ -356,14 +345,6 @@ devices for swap-out.
 % feature and opt-out choices for storage).
 
 
-\section{IMPACT}
+\section{CONCLUSION}
 
-\comm{This can be changed to a short conclusion section.}
-
-Our team is highly interdisciplinary, comprising a
-statistician, a neurologist, and multiple computer scientists in trial
-design/analytics, all with extensive experience in AD research. This R21
-is especially timely, addressing the growing demand for complementary
-alternatives to traditional human-led interventions. If feasible and
-successful, it will greatly increase the accessibility of early dementia
-intervention for older adults with limited social interaction.
+In summary, this R21 will translate the evidence-based I-CONECT conversational protocol into an AI-delivered, multimodal system designed for older adults with limited social interaction. Led by an interdisciplinary team spanning neurology, biostatistics, and computer science, we will develop the AI system and establish feasibility to inform future scale-up and dissemination.
