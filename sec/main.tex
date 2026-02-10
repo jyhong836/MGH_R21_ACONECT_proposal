@@ -12,33 +12,34 @@ Thus, it is important to develop accessible and affordable prevention strategies
 
 \textbf{Critical Barriers.} Limited social interaction is a recognized, modifiable
 risk factor for cognitive decline in older adults
-\cite{evans2019social,kallianpur2023weak,nasem2020social,penninkilampi2018association,poey2017social,shen2022associations}. However, effective interventions that can deliver frequent social engagement at the population scale remain limited.
+\cite{evans2019social,kallianpur2023weak,nasem2020social,penninkilampi2018association,poey2017social,shen2022associations}. 
+% However, effective interventions that can deliver frequent social engagement at the population scale remain limited.
+For example, cognitively stimulating interactions with diverse social groups can maintain cognitive function, more than emotional bonding\cite{Perry2022SocialNetworksCognition}.
 The recent clinical trial (I-CONECT; NCT02871921) showed that
-\textbf{semi-structured conversational engagement} with cognitive stimulation can mitigate cognitive decline among older adults with limited social interaction and mild cognitive impairment (MCI) or normal cognition\cite{dodge2024internet}. Yet, \textit{human-delivered interventions are constrained by workforce availability and high cost}, rendering a persistent barrier to broad dissemination.
-In response to this challenge, conversational AI has the potential to provide scalable conversational engagement and enhancing cognitive reserve; however, most existing AI systems\cite{ouyang2022training} have not encoded essential scientific methods for dementia prevention.
-In our preliminary study\cite{hong2024aconect}, we showed that Large Language Models (LLMs) can be customized to approximately follow the I-CONECT protocol in simulated textual conversations. 
-However, compared with human-led conversations, the system remained under-optimized for engaging older adults, including limited interactivity; technical barriers for older adults to operate computers; unverified compliance with I-CONECT protocols and safety rules; and unvalidated feasibility.
+\textbf{frequent social interactions via semi-structured conversational engagement aimed to provide cognitive stimulation} can mitigate cognitive decline among older adults with limited social interaction and mild cognitive impairment (MCI) or normal cognition\cite{dodge2024internet}. Yet, \textit{such interventions are constrained by workforce availability and high cost}, rendering a persistent barrier to broad dissemination.
+In response to this challenge, conversational AI has the potential to provide scalable conversational engagement and enhance cognitive reserve; however, most existing AI systems\cite{ouyang2022training} have not encoded essential scientific methods for dementia prevention.
+In our preliminary study (AI-CONECT)\cite{hong2024aconect}, we showed that Large Language Models (LLMs) can be customized to follow the I-CONECT protocol in simulated textual conversations. 
+However, compared with human-led conversations, the system remained under-optimized for engaging older adults, including limited interactivity; technical barriers for older adults to operate computers; unverified compliance with I-CONECT protocols and safety; and unvalidated feasibility.
 
 \textbf{Solutions.} To enhance the accessibility and affordability of
 the I-CONECT intervention, we propose to develop a Conversational AI with Multimodal Interaction (AIMI-CONECT) to simulate human-led conversational engagement (I-CONECT). 
 To address the limitations of prior arts, our specific aims are:
 
 \textbf{Aim 1: Develop a conversational AI with multimodal interaction (AIMI-CONECT) to execute the I-CONECT intervention.} 
-We will use an agentic AI system driven by an LLM to follow the I-CONECT protocol.
+We will use an agentic AI system driven by an LLM to follow the efficacy-proven I-CONECT protocol.
 (i) \textit{Multimodal interaction} augments user engagement by enabling human-AI collaborative recreation and exploration of 3D reminiscence scenes, voice chat, and visual affective responses\cite{zhao2025transferring}.
 (ii) \textit{Usability}: To reduce barriers for older adults, we will integrate a ready-to-go social robot with a real-time, responsive audio interface that does not require typing or frequent button presses.
 (iii) \textit{Protocol Compliance}:
 We will utilize machine learning algorithms to align LLM behavior with the protocol and adopt real-time, in-conversation guardrails to monitor critical situations, including protocol drift, negative affect, and other safety risks.
 
 \textbf{Aim 2: Conduct a feasibility study to evaluate the AI among 40
-older adults (age $\geq$ 75) with limited social interaction and (1:1 ratio) with MCI or normal
-cognition and identify areas for refinement.}
+older adults (age $\geq$ 75) with limited social interaction and with MCI (n=20) or normal
+cognition (n=20) and identify areas for refinement.}
 We will recruit participants to use our chatbot and complete brief
 surveys. Each participant will receive 24 sessions in 6 weeks (4
-sessions per week). Each session will be an independent 10-minute
+sessions per week). Each session will be an independent 15-minute
 conversation with the chatbot. A staff member will complete weekly
-15-minute check-in phone calls to assess emotional status and potential
-risks in using AI. We will collect both objective data and subjective
+10-minute check-in phone calls to assess emotional status, potential risks and technical challenges (if any) in using AI. We will collect both objective data and subjective
 surveys: recruitment ratio (ratio of contacted to enrolled participants), adherence rate (the proportion of participants who complete $\geq$80\% of sessions), user engagement level (participant's word ratio in a conversation), and user satisfaction (Client Satisfaction Questionnaire--8, CSQ-8)\cite{phenx2026client}. We will also collect surveys to understand participants' concerns and preferences for the different components and security in the system design, to inform future design.
 
 \textbf{Impact}. Our team is highly interdisciplinary, comprising
@@ -62,10 +63,10 @@ options, it was estimated that up to $\sim 40\%$ of AD risk
 may be attributable to modifiable factors. 
 For example, epidemiological research has associated limited social interaction with greater risk of cognitive decline and dementia \cite{evans2019social,kallianpur2023weak,nasem2020social,penninkilampi2018association,poey2017social,shen2022associations}. Meanwhile, it was estimated that increasing social interaction could approximately prevent 4\% of dementia cases\cite{livingston2020dementia}, motivating the development of behavioral interventions targeting limited social interaction\cite{dodge2015web,yu2021iconect,otake2021picmor,watanabemiura2025picmoa}.
 
-\textbf{Conversational intervention was proven effetive, but its scalable delivery remains challenging.}
+\textbf{Conversational intervention was proven effective, but its scalable delivery remains challenging.}
 Recently, the Internet-based conversational intervention, I-CONECT (NIH-funded clinical trial NCT02871921) which uses frequent one-to-one semi-structured conversational interactions via Internet, was proven to be effective in mitigating cognitive decline among older adults with limited social interaction and mild cognitive impairment (MCI)\cite{dodge2024internet}.
 However, its key limitation, as a foundation for public health impact, is
-a lack of feasibility for wide dissemination: the intervention relies on well-trained interviewer to deliver, which is workforce intensive and costly. 
+a lack of feasibility for wide dissemination: the intervention relies on well-trained interviewers to deliver, which is workforce-intensive and costly. 
 Scaling the intervention requires recruiting, training, and supervising staff, plus complex scheduling and quality assurance, which can increase costs and reduce delivery consistency and quality. 
 
 \textbf{Conversational AI provides a scalable alternative but is under explored.}
@@ -74,7 +75,7 @@ The estimated cost reduction is significant: based on OpenAI GPT-4o pricing (Jul
 \cite{openai2024pricing}), a twice-per-week, one-year service would cost
 0.3\% of an estimated human-delivered service cost, based on 2024 salary estimates\cite{ziprecruiter2024chat,hong2024aconect}.
 % However, effects remain mixed and early, with several studies emphasizing usability or short-term outcomes rather than long-term, protocol-based intervention delivery in the intended high-risk population.
-\textbf{Despite the promise, most currently available conversational AI systems lack a scientific basis and an evidence-based, efficacy-proven approach address cognitive decline by executing an intervention as an interviewer.}
+\textbf{Despite the promise, most currently available conversational AI systems lack a scientific basis and an evidence-based, efficacy-proven approach to address cognitive decline by executing an intervention as an interviewer.}
 Prior chatbot-based intervention studies in older adults have shown feasibility and acceptability as an assistant (rather than an interviewer or therapist) in web-based problem solving, daily cognitive training, and simple memory training\cite{bennion2020usability,kramer2022embodied,lee2021smartphone,tokunaga2021dialogue,wianto2021chattybot}.
 As an early attempt, our prior work customized LLMs to follow the NIH-funded efficacy-proven I-CONECT conversational interaction protocol via prompt engineering\cite{hong2024aconect}; however, it has multiple limitations:
 (i) The single-modality conversation has limited interactivity and thereby lowers engagement compared to human-led ones; 
@@ -100,7 +101,7 @@ AIMI-CONECT translates an efficacy-proven, interviewer-led dementia prevention i
 \textbf{Multimodal interaction enabled conversational AI system improving usability and engagement.} 
 To mitigate the gap between human and AI-led interaction, particularly the gap causing low engagement for older adults, AIMI-CONECT integrates multimodal interaction into the conversational system: (1) a \emph{voice}-forward interface (real-time speech input/output); (2) visual affective robot; (3) user-AI co-recreation of reminiscence 3D scene via conversational instructions. 
 Compared with conventional chat interfaces, the compound design lowers operational demands enhancing usability, and enables more engaging conversations aligned with the I-CONECT goals.
-Unique to this work, the 3D scene recreation allows the participants to actively engage in the reminiscence process as well as detailed item describing with enhanced vocabulary, which are key therapeutic components of the I-CONECT protocol, and thereby may strengthen the cognitive stimulation effects.
+Unique to this work, the 3D scene recreation allows the participants to actively engage in the reminiscence as well as vocabulary enhancement (via describing personally relevant items in a scene), which are key therapeutic components of the I-CONECT protocol, and thereby may strengthen the cognitive stimulation effects.
 
 \textbf{Enhancing protocol compliance of AI via learning from clinical trial grounded conversation simulation.}
 We leverage reinforcement learning from human feedback (RLHF)\cite{ouyang2022training} to align the LLM-based chatbot to the I-CONECT protocol.
@@ -117,12 +118,17 @@ This approach extends existing AI development methods by adding a quantitative, 
 \textbf{C.1 Intervention Protocol with Safety Assurance}
 
 The intervention protocol is adapted from I-CONECT~\cite{dodge2024internet} to fit the AI-based intervention.
-Each session will last 15 minutes and follow the conversation flow, starting with a greeting and image/topic presentation, followed by open conversation in which reminiscence and vocabulary enhancement are executed spontaneously.
-(1) \textit{Image and Language Prompting for Critical Thinking}. We adopt the same image and language prompts as I-CONECT to stimulate participants' interests and cognitive function. The participant will be prompted with in-depth questions centered on the topics from the I-CONECT study.
-(2) \textit{Reminiscence with Visual interactions}. We will engage participants in reminiscence by asking
+Each session will last 15 minutes and follow the conversation flow, starting with a greeting and topic selection from three candidates within a randomized theme, followed by open conversation in which reminiscence and vocabulary enhancement are executed spontaneously.
+(1) \textit{Image and Language Prompting for Critical Thinking}. We adopt the same topics and cognitively-demanding language prompts as I-CONECT to stimulate participants' interests and cognitive function in conversation. Based on the prompts, images generated by AI are used as visual prompts to strengthen the participants' engagement in the topic selection stage. 
+% The participant will be prompted with
+%   Additional in-depth questions centered on the topics from the I-CONECT study.
+(2) \textit{Reminiscence with Visual Interactions}. We will engage participants in reminiscence by asking
 about their personal experiences related to the presented images and topics. With the AI tools, the participants will engage in generating personalized 3D scenes based on the conversation and AI memory from prior sessions.
 (3) \textit{Vocabulary Enhancement with Hints}. We will prompt the participants to describe the presented images in detail to enhance their vocabulary usage. AI will guide the participants to describe specific details by providing visual hints, e.g., zooming in on image parts.
-(4) \textit{Safety Assurance}. In contrast to the human-delivered protocol, we add safety assurance to define prohibited behaviors that should be avoided in conversations, for example, illegal content or financial advice.
+(4) \textit{Safety Assurance}. 
+We add safety assurance to define prohibited behaviors that should be avoided in conversations, for example, illegal content or financial advice. We also flag suicidal tendency using a protocol similar to the one used in I-CONECT.
+
+% In contrast to the human-delivered protocol, we add safety assurance to define prohibited behaviors that should be avoided in conversations, for example, illegal content or financial advice.
 
 \textbf{C.2 System Design with Multimodal Interaction.} 
 
@@ -193,8 +199,11 @@ Then, we will train LLMs to learn from the \textit{feedback} on compliance in co
 
 \textbf{C.4 Approach for Feasibility Study.} 
 
-We will test the chatbot at the Memory Division of the Massachusetts Alzheimer's Disease Research Center (MADRC) and I-CONECT Foundation. 
-40 older adults will be recruited to complete
+We will test the chatbot in older adults with MCI diagnosis or normal cognition recruited from the 
+% Memory Clinic at Massachusetts General Brigham (formally known as the Massachusetts General Hospital and Brigham Women's Hospital) and Division of the Massachusetts Alzheimer's Disease Research Center (MADRC) 
+Memory Division at Mass General Brigham (MGB, formally known as the Massachusetts General Hospital and Brigham Women's Hospital) and Director of the Massachusetts Alzheimer's Disease Research Center (MADRC).
+% at the Memory Division of the Massachusetts Alzheimer's Disease Research Center (MADRC) and I-CONECT Foundation. 
+40 older adults (20 MCI, 20 with normal cognition) will be recruited to complete
 feasibility/satisfaction surveys on their overall experience in terms of
 adherence, happiness, emotional lifting, empathy, and trustworthiness
 (e.g., reporting harmful or hateful biases). The survey will also
@@ -203,22 +212,20 @@ increase social interactions.
 
 Each participant will receive 15-min conversations with our chatbot for
 24 sessions in 6 weeks (4 sessions per week). A staff member will conduct
-weekly 15-min check-in phone calls to assess emotional status and
+weekly 10-min check-in phone calls to assess emotional status and
 potential risks in using AI.
 In 6 weeks, we will collect both objective data and
-subjective surveys to assess the feasibility and satisfaction.
+subjective survey responses to assess feasibility and satisfaction.
 
-To isolate the effects of social engagement from confounding factors, the study incorporates three key design elements. (1) First, we employ chatbot persona rotation across participants to enhance interaction variability and minimize emotional bonding confounds, with personas drawn from a pool based on I-CONECT interviewer profiles. (2) Second, our intuitive interface and natural-sounding voice capabilities enable participants lacking internet or webcam proficiency to participate in conversations without additional cognitive burden from technology learning. (3) Third, we leverage the standardized daily themes and image stimuli from I-CONECT to support participants in organizing and expressing their ideas within conversations\cite{dodge2024internet}.
+To isolate the effects of social engagement from confounding factors and enhance cognitive stimulation, the study incorporates three key design elements. (1) First, we employ persona rotation (via prompting LLMs) across participants to enhance interaction variability and increase conversation novelty. Personas will be drawn from a pool initiated from I-CONECT interviewer profiles. (2) Our intuitive interface and natural-sounding voice capabilities enable participants with limited Internet or webcam proficiency to participate in conversations without additional cognitive burden from learning new technology. (3) Third, we leverage the standardized daily themes and image stimuli from I-CONECT to support participants in organizing and expressing their ideas within conversations\cite{dodge2024internet}.
 
-\textbf{Participant Recruitment}. We will recruit a total of \textbf{40
-socially isolated older adults aged $\geq75$ years} from the MGH Memory
-Division and the I-CONECT Foundation. The cohort will consist of two
+\textbf{Participant Recruitment}. We will recruit a total of \textbf{40 older adults with limited social interactions aged $\geq75$ years} from the MGH Memory
+Division and MADRC. The cohort will consist of two
 balanced groups: \textbf{20 individuals with mild cognitive impairment
 (MCI)} and \textbf{20 cognitively normal (NC)} participants.
-We adopt the same operational criteria used in the original NIH-funded I-CONECT study.
+We adopt the same operational inclusion/exclusion criteria used in the original NIH-funded I-CONECT study.
 
-\textit{Inclusion criteria}: \noindent (1) Aged 75+; (2) Cognitive status assessed via the Telephone Interview for Cognitive Status (TICS)\cite{fong2009telephone} is MCI or NC (1:1 ratio); (3) Identified as socially isolated by one of: (a) Score $\leq 12$ on the 6-item Lubben Social Network Scale (LSNS-6) \cite{lubben2006performance}; (b) Engages in conversations lasting 30 minutes or longer no more than twice per week, per participant self-report; (c) Answering ``Often'' to at least one question of the three\cite{russell1978developing}: ``How often do you feel that you lack companionship?'', ``How often do you feel left out?'', ``How often do you feel isolated from others?'' (4) GDS-15 (15-item Geriatric Depression Scale) at or below 9 (not severely depressed) \cite{yesavage1982development}. (6) Ability to understand the research consent form.
-
+\textit{Inclusion criteria}: \noindent (1) Aged 75+ (In the original I-CONECT study, this age group was selected due to an increased risk of reduced social interaction. We will use the same age group for this pilot feasibility study.); (2) Cognitive status assessed via the Telephone Interview for Cognitive Status (TICS)\cite{fong2009telephone} is MCI or NC (1:1 ratio); (3) Identified as socially isolated by one of: (a) Score $\leq 12$ on the 6-item Lubben Social Network Scale (LSNS-6) \cite{lubben2006performance}; (b) Engages in conversations lasting 30 minutes or longer no more than twice per week, per participant self-report; (c) Answering ``Often'' to at least one question of the three\cite{russell1978developing}: ``How often do you feel that you lack companionship?'', ``How often do you feel left out?'', ``How often do you feel isolated from others?'' (4) GDS-15 (15-item Geriatric Depression Scale) at or below 9 (not severely depressed) \cite{yesavage1982development}; (6) Ability to understand the research consent form.
 
 \textit{Exclusion criteria}: \noindent (1) Diagnosed with dementia such as AD, ischemic vascular dementia, normal pressure hydrocephalus, or Parkinson's disease. (2) Schizophrenia or other major psychiatric disorder defined by DSM-IV criteria \cite{wilson1994special}. (3) Medications: frequent use of high doses of analgesics; use of sedative medications except for those used occasionally for sleep ($\leq2$ per week); unstable dosing of cholinesterase inhibitors (must be stable for 2 months).
 
@@ -274,6 +281,7 @@ completion, technology burden, or need for support).
 
 In addition, \textbf{recruitment ratio}, ratio of contacted to enrolled participants, will be collected during the recruitment process.
 \textbf{User engagement level} will be measured by the participant's word ratio in a conversation, which is the proportion of words spoken by the participant relative to the total words in the conversation. This metric provides insight into how actively participants are engaging with the chatbot during sessions.
+For example, in the original I-CONECT study, interviewers were trained and standardized to ensure that participants contributed at least 30\% of the total words spoken.  
 
 \textbf{(2) Acceptability} of the AIMI-CONECT
 intervention will be evaluated using the Client Satisfaction
@@ -310,7 +318,8 @@ We will also collect surveys to understand participants' concerns and preference
 
 \textbf{Exploratory Outcomes.} 
 Other outcomes will be collected as supplementary information to inform future design and trials.
-Cognitive assessments will be collected for exploratory and descriptive purposes only. Additional surveys will be collected to understand participants' preferences for the different components in the system design, to inform future design.
+Cognitive assessments, obtained from the Memory Division of MGB and MADRC using the date closest to study enrollment, will be collected for exploratory and descriptive purposes only. 
+Additional surveys will be collected to understand participants' preferences for the different components in the system design, to inform future design.
 
 \section{POTENTIAL RISKS AND ALTERNATIVE STRATEGIES}
 
@@ -347,4 +356,4 @@ devices for swap-out.
 
 \section{CONCLUSION}
 
-In summary, this R21 will translate the evidence-based I-CONECT conversational protocol into an AI-delivered, multimodal system designed for older adults with limited social interaction. Led by an interdisciplinary team spanning neurology, biostatistics, and computer science, we will develop the AI system and establish feasibility to inform future scale-up and dissemination.
+In summary, this R21 will translate the evidence-based I-CONECT conversational protocol into an AI-delivered, multimodal system designed for older adults with limited social interaction. Led by an interdisciplinary team spanning neurology, biostatistics, gerontology, and computer science, we will develop the AI system and establish feasibility to inform future scale-up and dissemination. This feasibility study represents a necessary preliminary step before clinical trials evaluating the clinical efficacy of AIMI-CONECT.
