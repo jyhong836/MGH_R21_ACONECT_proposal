@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-VER=6
+VER=7
 INPUT=".vscode/main.pdf"
 OUTDIR="submission"
 
@@ -13,7 +13,14 @@ declare -A pages=(
   ["10"]="project_narrative_v${VER}.pdf"
   ["11"]="resource_sharing_plan_v${VER}.pdf"
   ["12"]="DMS_plan_v${VER}.pdf"
-  ["13-"]="references.pdf"
+  ["14"]="inclusion_lifespan_v${VER}.pdf"
+  ["15"]="inclusion_women_race_v${VER}.pdf"
+  ["16"]="recruitment_retention_plan_v${VER}.pdf"
+  ["17"]="timeline_v${VER}.pdf"
+  ["19"]="protection_v${VER}.pdf"
+  ["20"]="data_safety_monitoring_v${VER}.pdf"
+  ["21"]="team_v${VER}.pdf"
+  ["22-"]="references.pdf"
 )
 
 for pagelist in "${(@k)pages}"; do
