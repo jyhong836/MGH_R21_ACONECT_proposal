@@ -8,11 +8,11 @@ Roadmap
 4. Grammar final checking.
 
 Sync between latex and word:
-* LaTeX -> Word: `pandoc main.tex --from=latex --to=docx --citeproc --csl=nature-publishing-group-vancouver.csl --metadata=link-citations:true --reference-doc=reference.docx -o main.docx `
+* LaTeX -> Word: `pandoc main.tex --from=latex --to=docx --citeproc --csl=nature-publishing-group-vancouver.csl --metadata=link-citations:true --reference-doc=reference.docx -o main.docx`
 * Word -> Latex: `pandoc main.docx --from=docx+citations --extract-media=figures --to=latex -o main.raw.tex`
 * `sed -E 's/\\hyperref\[ref-([^]]+)\]\{\\textsuperscript\{[0-9]+\}\}/\\cite{\1}/g' main.raw.tex > main.fixed.tex`
 
-
+Prepare the final version `zsh split_file.sh` then upload files in `submission`.
 
 To update style, set in `reference.docx`.
 
@@ -22,14 +22,19 @@ This section describes what content are required for each section.
 
 ### Specific Aims
 
-Who must complete the "Specific Aims" attachment:The “Specific Aims” attachment is required unless otherwise specified in the NOFO.Format:Follow the page limits for the Specific Aims in the NIH Table of Page Limits unless otherwise
-specified in the NOFO. A “Specific Aims” attachment that exceeds the page limit will be flagged as
-an error by the Agency upon submission.Attach this information as a PDF file. See NIH's Format Attachments page. Hyperlinks and URLs
-may not be used in this section unless specified as allowed in the funding opportunity.Content:State concisely the goals of the proposed research and summarize the expected outcome(s),
-including the impact that the results of the proposed research will have on the research field(s)
-involved.List succinctly the specific objectives of the research proposed (e.g., to test a stated hypothesis,
-create a novel design, solve a specific problem, challenge an existing paradigm or clinical practice,
-address a critical barrier to progress in the field, or develop new technology).3. Research StrategyWho must complete the "Research Strategy" attachment:The “Research Strategy” attachment is required.Format:Follow the page limits for the Research Strategy in the NIH Table of Page Limits, unless otherwise
+Who must complete the "Specific Aims" attachment:The “Specific Aims” attachment is required unless otherwise specified in the NOFO.
+
+**Format**:
+Follow the page limits for the Specific Aims in the NIH Table of Page Limits unless otherwise specified in the NOFO. A “Specific Aims” attachment that exceeds the page limit will be flagged as an error by the Agency upon submission.Attach this information as a PDF file. See NIH's Format Attachments page. Hyperlinks and URLs may not be used in this section unless specified as allowed in the funding opportunity.
+
+**Content**: 
+State concisely the goals of the proposed research and summarize the expected outcome(s), including the impact that the results of the proposed research will have on the research field(s) involved.
+
+List succinctly the **specific objectives** of the research proposed (e.g., to test a stated hypothesis, create a novel design, solve a specific problem, challenge an existing paradigm or clinical practice, address a critical barrier to progress in the field, or develop new technology).
+
+### Research Strategy
+
+Who must complete the "Research Strategy" attachment:The “Research Strategy” attachment is required.Format:Follow the page limits for the Research Strategy in the NIH Table of Page Limits, unless otherwise
 specified in the NOFO. Although multiple sections of information are required in the Research
 Strategy as detailed below, the page limit applies to the entirety of the single "Research Strategy"
 attachment.Attach this information as a PDF file. See NIH's Format Attachments page. Hyperlinks and URLs
@@ -42,7 +47,7 @@ included in the proposed application you must include specific information in th
 section of the Research Strategy attachment. See specific instructions below in Section 3.
 
 
-### Significance
+#### Significance
 
 1. Explain the importance of the problem or critical barrier to progress that the proposed
 project addresses.
@@ -54,7 +59,7 @@ and/or clinical practice in one or more broad fields.
 preventative interventions that drive this field will be changed if the proposed aims
 are achieved.
 
-### Innovation
+#### Innovation
 
 1. Explain how the application challenges and seeks to shift current research or clinical
 practice paradigms.
@@ -65,7 +70,7 @@ methodologies, instrumentation, or interventions.
 approaches or methodologies, instrumentation, or interventions.
 
 
-### Approach
+#### Approach
 
 Method:
 1. Describe the overall strategy, 

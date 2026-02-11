@@ -16,6 +16,7 @@
 \usepackage{soul}  % For underlining with \ul
 \usepackage{amssymb}  % For mathematical symbols including \geq and \leq
 \usepackage{titlesec}  % For customizing section formatting
+\usepackage{booktabs}
 
 % Disable hyperlink embedding for natbib citations while keeping other hyperlinks.
 \makeatletter
@@ -92,9 +93,13 @@
 \input{sec/appendix.tex}
 \input{sec/human.tex}
 
+\input{sec/protection.tex}
+
 \clearpage
 % Keep bibliography URLs visible but non-clickable.
 \begingroup
+\singlespacing
+\setlength{\bibsep}{0pt}
 \let\url\nolinkurl
 \makeatletter
 \let\href\@secondoftwo

@@ -1,10 +1,12 @@
 #!/bin/zsh
 
-VER=7
+VER=7.1
 INPUT=".vscode/main.pdf"
 OUTDIR="submission"
 
 mkdir -p "$OUTDIR"
+
+rm -f "${OUTDIR}"/*.pdf
 
 declare -A pages=(
   ["2"]="aim_page_v${VER}.pdf"
@@ -20,7 +22,7 @@ declare -A pages=(
   ["19"]="protection_v${VER}.pdf"
   ["20"]="data_safety_monitoring_v${VER}.pdf"
   ["21"]="team_v${VER}.pdf"
-  ["22-"]="references.pdf"
+  ["22-"]="references_v${VER}.pdf"
 )
 
 for pagelist in "${(@k)pages}"; do
