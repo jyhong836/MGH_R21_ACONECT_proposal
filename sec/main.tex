@@ -134,17 +134,17 @@ We add safety assurance to define prohibited behaviors that should be avoided in
 
 The system is composed of three main modules: (1) A trained Chat LLM that is responsible for handling the conversation in text; (2) A multimodal interface that routes input from users (MCI/NC older users) to the Chat LLM; (3) Backend processing includes safety monitoring, and 3D generation that will be executed asynchronously to avoid blocking real-time interaction.
 
-\textbf{(1) Voice interface.}
-To enhance the accessibility of the chatbot for older adults, we will implement a voice-forward interface that enables natural spoken interaction. Specifically, user speech will be captured through an on-device microphone and converted to text using streaming speech-to-text (STT), so the dialogue manager can apply the I-CONECT conversation strategies in real time. The chatbot's responses will be produced as text and then rendered as natural-sounding speech via text-to-speech (TTS), allowing participants to engage without typing or reading long on-screen messages.
-We will primarily use the OpenAI Realtime API to support low-latency, bidirectional audio streaming and automatic turn-taking (i.e., detecting when the participant has finished speaking and when the system should respond). This capability is important for older adults because it reduces the need for explicit controls such as ``push-to-talk'' buttons and minimizes conversational interruptions due to delayed responses. We will also log time-stamped transcripts (from STT) and system audio outputs (from TTS) to support protocol compliance checks and safety monitoring while avoiding storage of unnecessary identifiers.
-
 
 \begin{wrapfigure}{r}{0.45\textwidth}
-  \vspace{-0.8\baselineskip}
+  \vspace{-1.8\baselineskip}
   \centering
   \includegraphics[width=0.45\textwidth]{figures/system.png}
   \vspace{-1.2\baselineskip}
 \end{wrapfigure}
+\textbf{(1) Voice interface.}
+To enhance the accessibility of the chatbot for older adults, we will implement a voice-forward interface that enables natural spoken interaction. Specifically, user speech will be captured through an on-device microphone and converted to text using streaming speech-to-text (STT), so the dialogue manager can apply the I-CONECT conversation strategies in real time. The chatbot's responses will be produced as text and then rendered as natural-sounding speech via text-to-speech (TTS), allowing participants to engage without typing or reading long on-screen messages.
+We will primarily use the OpenAI Realtime API to support low-latency, bidirectional audio streaming and automatic turn-taking (i.e., detecting when the participant has finished speaking and when the system should respond). This capability is important for older adults because it reduces the need for explicit controls such as ``push-to-talk'' buttons and minimizes conversational interruptions due to delayed responses. We will also log time-stamped transcripts (from STT) and system audio outputs (from TTS) to support protocol compliance checks and safety monitoring while avoiding storage of unnecessary identifiers.
+
 \textbf{(2) 3D Memory Scene Collaborative Recreation.}
 To enhance reminiscence and engagement, we will implement a user-AI collaborative 3D scene recreation system. Our preliminary work showed that 3D scene creation can improve participants' interest in using a reminiscence chatbot\cite{kononovych2025visual}.
 During conversations, the chatbot will prompt participants to describe specific details of their memory associated with the presented images (e.g., ``Can you tell me what this picture reminds you of?''). Based on the participant's descriptions, the system will generate a personalized 3D scene that visually represents their memories and experiences related to the image. This process allows participants to actively engage in reminiscence while also providing visual cues that can stimulate further conversation and cognitive activity. The 3D scenes will be generated asynchronously to ensure that they do not disrupt the real-time flow of conversation.
@@ -193,7 +193,7 @@ RLHF relies on conversations between the chatbot and real users to collect feedb
 
 \textbf{(2) Optimizing AI for Protocol Compliance via Learning from Verifiable Feedback.}
 We will customize Large Language Models (LLMs) to implement the I-CONECT intervention strategies. We will first engineer prompts that instruct LLMs to carry out predefined tasks, including proposing chat themes and topics, and presenting topic-related images. To enhance LLMs' capability to engage users in 15-min conversations, we will improve conversation engagement using heuristics and data from the I-CONECT trials. On the one hand, we will consult interviewers and related researchers (from the I-CONECT team) to provide heuristic conversation strategies and encode the heuristics in the instructions for LLMs. On the other hand, we will \textit{supervised fine-tune} the LLMs to learn spontaneous language patterns, for example, the active use of filler words, from interviewers' speech in the I-CONECT conversation data. The conversation data will be processed from audio recordings, and we will develop speaker-aware Automatic Speech Recognition to extract high-quality text data for LLM fine-tuning.
-Then, we will train LLMs to learn from the \textit{feedback} on compliance in conversations. Each time the LLM has a conversation with a user (participant), we will use a rule-based method to rate protocol compliance (engagement time, reminiscence-induction frequency, and user vocabulary). The ratings will be used to train a reward model that guides the LLMs to generate protocol-compliant conversations via Reinforcement Learning with (Human) Feedback (RLVF)\cite{ouyang2022training,yang2025advf}.
+Then, we will train LLMs to learn from the \textit{feedback} on compliance in conversations. Each time the LLM has a conversation with a user (participant), we will use a rule-based method to rate protocol compliance (engagement time, reminiscence-induction frequency, and user vocabulary). The ratings will be used to train a reward model that guides the LLMs to generate protocol-compliant conversations via Reinforcement Learning\cite{ouyang2022training,yang2025advf}.
 
 
 
@@ -225,13 +225,13 @@ balanced groups: \textbf{20 individuals with mild cognitive impairment
 (MCI)} and \textbf{20 cognitively normal (NC)} participants.
 We adopt the same operational inclusion/exclusion criteria used in the original NIH-funded I-CONECT study.
 
-\textit{Inclusion criteria}: \noindent (1) Aged 75+ (In the original I-CONECT study, this age group was selected due to an increased risk of reduced social interaction. We will use the same age group for this pilot feasibility study.); (2) Cognitive status assessed via the Telephone Interview for Cognitive Status (TICS)\cite{fong2009telephone} is MCI or NC (1:1 ratio); (3) Identified as socially isolated by one of: (a) Score $\leq 12$ on the 6-item Lubben Social Network Scale (LSNS-6) \cite{lubben2006performance}; (b) Engages in conversations lasting 30 minutes or longer no more than twice per week, per participant self-report; (c) Answering ``Often'' to at least one question of the three\cite{russell1978developing}: ``How often do you feel that you lack companionship?'', ``How often do you feel left out?'', ``How often do you feel isolated from others?'' (4) GDS-15 (15-item Geriatric Depression Scale) at or below 9 (not severely depressed) \cite{yesavage1982development}; (6) Ability to understand the research consent form.
+\textit{\underline{Inclusion criteria}}: \noindent (1) Aged 75+ (In the original I-CONECT study, this age group was selected due to an increased risk of reduced social interaction. We will use the same age group for this pilot feasibility study.); (2) Cognitive status assessed via the Telephone Interview for Cognitive Status (TICS)\cite{fong2009telephone} is MCI or NC (1:1 ratio); (3) Identified as socially isolated by one of: (a) Score $\leq 12$ on the 6-item Lubben Social Network Scale (LSNS-6) \cite{lubben2006performance}; (b) Engages in conversations lasting 30 minutes or longer no more than twice per week, per participant self-report; (c) Answering ``Often'' to at least one question of the three\cite{russell1978developing}: ``How often do you feel that you lack companionship?'', ``How often do you feel left out?'', ``How often do you feel isolated from others?'' (4) GDS-15 (15-item Geriatric Depression Scale) at or below 9 (not severely depressed) \cite{yesavage1982development}; (6) Ability to understand the research consent form.
 
-\textit{Exclusion criteria}: \noindent (1) Diagnosed with dementia such as AD, ischemic vascular dementia, normal pressure hydrocephalus, or Parkinson's disease. (2) Schizophrenia or other major psychiatric disorder defined by DSM-IV criteria \cite{wilson1994special}. (3) Medications: frequent use of high doses of analgesics; use of sedative medications except for those used occasionally for sleep ($\leq2$ per week); unstable dosing of cholinesterase inhibitors (must be stable for 2 months).
+\textit{\underline{Exclusion criteria}}: \noindent (1) Diagnosed with dementia such as AD, ischemic vascular dementia, normal pressure hydrocephalus, or Parkinson's disease. (2) Schizophrenia or other major psychiatric disorder defined by DSM-IV criteria \cite{wilson1994special}. (3) Medications: frequent use of high doses of analgesics; use of sedative medications except for those used occasionally for sleep ($\leq2$ per week); unstable dosing of cholinesterase inhibitors (must be stable for 2 months).
 
 \section{DATA PROCESSING AND ANALYSES}
 
-\textbf{Aim 1}: We will use I-CONECT recorded conversations to optimize the chatbot design for better compliance with the I-CONECT protocol.
+\textbf{Aim 1}: We will use I-CONECT recorded conversations to optimize AI for better compliance with the I-CONECT protocol.
 
 \textbf{Method: Processing I-CONECT Data and Constructing Virtual Users.} We will use the recorded I-CONECT audio conversations to build virtual users of the corresponding participants. All data will be processed on
 HIPAA-compliant servers with personal identifiable information removed.
@@ -260,81 +260,75 @@ impairment (MCI)} and \textbf{20 cognitively normal (NC)} participants.
 % feasibility and user satisfaction}, rather than to test intervention
 % efficacy.
 
-\textbf{(1) Adherence.} The primary feasibility outcome is
-adherence to the intervention, defined at the participant level as
-completion of \textbf{$\geq80\%$ of scheduled AIMI-CONECT sessions}. A total
-sample size of \textbf{N=40} allows estimation of the overall adherence
-proportion with adequate precision. For example, assuming an expected adherence rate of approximately
-\textbf{80\%}, N=40 yields a 95\% confidence interval with a half-width
+\textbf{(1) Adherence.} The primary feasibility outcome is \textbf{adherence rate} to the intervention, defined at the participant level as
+completion of \textit{$\geq$80\% of scheduled AIMI-CONECT sessions}. A total
+sample size of N=40 allows estimation of the overall adherence ratio with adequate precision. For example, assuming an expected adherence rate of approximately 80\%, N=40 yields a 95\% confidence interval with a half-width
 of approximately \textbf{$\pm 12\%$}, which is sufficient to determine
 whether adherence meets the predefined feasibility threshold. 
 
-Including \textbf{20 MCI and 20 NC participants} ensures that
-feasibility can be assessed across two cognitively distinct but relevant
-subpopulations. With \textbf{N=20 per group}, adherence rates can be
-estimated separately for MCI and NC participants with acceptable
-precision for feasibility purposes, allowing identification of
-group-specific implementation challenges (e.g., differential session
-completion, technology burden, or need for support).
+
 %  without powering the
 % study for between-group efficacy comparisons.
 
-In addition, \textbf{recruitment ratio}, ratio of contacted to enrolled participants, will be collected during the recruitment process.
+In addition, \textbf{recruitment ratio}, ratio of contacted to enrolled participants, will be collected during the recruitment process, reflecting people's willingness to use AI.
 \textbf{User engagement level} will be measured by the participant's word ratio in a conversation, which is the proportion of words spoken by the participant relative to the total words in the conversation. This metric provides insight into how actively participants are engaging with the chatbot during sessions.
 For example, in the original I-CONECT study, interviewers were trained and standardized to ensure that participants contributed at least 30\% of the total words spoken.  
 
 \textbf{(2) Acceptability} of the AIMI-CONECT
-intervention will be evaluated using the Client Satisfaction
-Questionnaire-8 (CSQ-8)\cite{phenx2026client}, a validated measure of user satisfaction for
+intervention will be evaluated using the \textbf{Client Satisfaction Questionnaire-8 (CSQ-8)}\cite{phenx2026client}, a validated measure of user satisfaction for
 health and behavioral interventions, with total scores ranging from 8 to
 32 and higher scores indicating greater satisfaction.
-\textbf{Acceptability will be defined a priori using explicit,
-quantitative criteria}, such that the intervention will be considered
-well accepted if the \textbf{mean CSQ-8 score is $\geq24$}, \textbf{at least
+Acceptability will be defined a priori using explicit,
+quantitative criteria, such that the intervention will be considered well accepted if the \textbf{mean CSQ-8 score is $\geq24$}, \textbf{at least
 70\% of participants achieve CSQ-8 scores $\geq24$}, and \textbf{no more than
 15\% of participants score $\leq20$}, indicating the absence of systematic
-dissatisfaction. A total sample size of \textbf{N=40 (20 MCI and 20
-cognitively normal participants)} is sufficient for this purpose because
-it provides adequate precision to evaluate these criteria without
-hypothesis testing. Specifically, if approximately 70\% of participants
+dissatisfaction. A total sample size of N=40 is sufficient for this purpose because
+it provides adequate precision. Specifically, if approximately 70\% of participants
 meet the satisfaction threshold (CSQ-8 $\geq24$), a sample of 40 yields a
 95\% confidence interval with a half-width of approximately
 \textbf{$\pm 14\%$}, allowing us to \textit{distinguish between unacceptably low
 satisfaction} (e.g., $<55$--$60\%$) and satisfaction levels
 consistent with good acceptability. 
-Similarly, with N=40, the \textit{mean CSQ-8 score} can be estimated with sufficient precision to determine whether it
-exceeds the prespecified benchmark of 24, while also allowing assessment
-of score variability and detection of potential ceiling or floor
-effects. The allocation of \textbf{20 participants per cognitive
-subgroup} further allows acceptability to be summarized separately for
-MCI and cognitively normal older adults, enabling identification of
-subgroup-specific usability or burden concerns.
+% Similarly, with N=40, the \textit{mean CSQ-8 score} can be estimated with sufficient precision to determine whether it
+% exceeds the prespecified benchmark of 24, while also allowing assessment
+% of score variability and detection of potential ceiling or floor effects. 
+
 % This precision-based justification aligns with the feasibility and
 % acceptability aims of the study and supports clear go/no-go decisions
 % for refinement and future trials, consistent with the exploratory intent
 % of the R21 mechanism.
 
-We will also collect surveys to understand participants' concerns and preferences for the different components and security in the system design, to inform future design.
+We will also collect \textbf{descriptive surveys} to understand participants' \textbf{concerns and preferences} for the different components and security in the system design, to inform future design.
+
+% With \textbf{N=20 per group}, adherence rates can be
+% estimated separately for MCI and NC participants with acceptable \comm{Can we?}
+% precision for feasibility purposes, allowing identification of
+% group-specific implementation challenges (e.g., differential session
+% completion, technology burden, or need for support).
+
+% \comm{to merege into above}
+% The allocation of \textbf{20 participants per cognitive
+% subgroup} further allows acceptability to be summarized separately for
+% MCI and cognitively normal older adults, enabling identification of
+% subgroup-specific usability or burden concerns.
 
 \textbf{Exploratory Outcomes.} 
+In addition to the score in the whole study group, the \textbf{subgroups} (20 MCI and 20 Normal Condition participants) ensures that feasibility (adherence and acceptability) can be assessed across two cognitively distinct but relevant subpopulations, allowing identification of group-specific implementation challenges (e.g., differential session
+completion, technology burden, or need for support).
+
 Other outcomes will be collected as supplementary information to inform future design and trials.
 Cognitive assessments, obtained from the Memory Division of MGB and MADRC using the date closest to study enrollment, will be collected for exploratory and descriptive purposes only. 
-Additional surveys will be collected to understand participants' preferences for the different components in the system design, to inform future design.
 
 \section{POTENTIAL RISKS AND ALTERNATIVE STRATEGIES}
 
-The project
-faces additional risks that are not fully resolved by the above approach,
-with corresponding alternative strategies:
-\textbf{(1) Poor infrastructure or environmental conditions.} In real-world
+We prepared alternative strategies to address potential risks that may arise during the project:
+\textbf{(1) Poor environmental conditions.} In real-world
 home conditions (e.g., intermittent connectivity, background noise, device
-microphone/speaker failures, or latency that disrupts turn-taking), usability and session completion could be reduced. As
-alternatives, we will implement a more efficient conversation flow that can
-operate with lower bandwidth (longer pauses between turns allowing more time for caching data), provide
-rapid device health checks and remote troubleshooting, and maintain spare
-devices for swap-out.
-\textbf{(2) Device malfunctioning}. Devices could be lost, damaged, or malfunctioning during the study, which could lead to missing data and reduced adherence. As alternatives, we will maintain spare devices for swap-out, provide rapid remote troubleshooting, and implement regular device health checks to identify issues early.
-\textbf{(3) LLM/API server downtime or rate limiting}. Dependence on third-party API services could lead to interruptions in chatbot availability due to server downtime or rate limiting, which could affect session completion and user experience. As alternatives, we will monitor API status continuously, implement caching strategies to handle temporary outages, and maintain a contingency plan to switch to alternative services or local models if necessary.
+microphone/speaker failures, or latency that disrupts turn-taking), usability and session completion could be reduced. As alternatives, we will implement a dynamic conversation flow that can
+operate with lower bandwidth (longer pauses between turns allowing more time for caching data).
+If the enviroment is not suitable (diagnosed automatically by a self-troubleshooting in our software), we will provide visual reminder to guide the participants to find a workaround (e.g., move to a quieter room).
+\textbf{(2) Device malfunctioning}. Devices could be lost, damaged, or malfunctioning during the study, which could lead to missing data and reduced adherence. As backup, we will maintain spare devices for swap-out, provide rapid remote troubleshooting, and implement regular device health checks to identify issues early.
+\textbf{(3) LLM/API server downtime or rate limiting}. Dependence on third-party API services could lead to interruptions in chatbot availability due to server downtime or rate limiting, which could affect session completion and user experience. As alternatives, we will monitor API status continuously, implement caching strategies to handle temporary outages, and maintain a contingency plan to switch to alternative services.
 % \textbf{(4) Model and platform drift} during the project
 % (e.g., changes in third-party model behavior, pricing, rate limits, or
 % content policies) could cause regressions in protocol compliance,
