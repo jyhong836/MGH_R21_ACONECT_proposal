@@ -2,7 +2,9 @@
 
 % Packages
 \usepackage[utf8]{inputenc}
-\usepackage{helvet}  % Arial font => Helvetica (allowed by NIH)
+% \usepackage{helvet}  % Arial font => Helvetica (allowed by NIH)
+\usepackage{fontspec}
+\setmainfont{Arial}
 \usepackage[margin=0.5in]{geometry}  % 0.5 inch margins on all sides
 \usepackage[hidelinks]{hyperref}
 \usepackage{xcolor}
@@ -15,10 +17,21 @@
 \usepackage{amssymb}  % For mathematical symbols including \geq and \leq
 \usepackage{titlesec}  % For customizing section formatting
 
+% Disable hyperlink embedding for natbib citations while keeping other hyperlinks.
+\makeatletter
+\AtBeginDocument{%
+  \@ifpackageloaded{hyperref}{%
+    \def\hyper@natlinkstart#1{}%
+    \def\hyper@natlinkend{}%
+    \def\hyper@natlinkbreak#1#2{#1}%
+  }{}%
+}
+\makeatother
+
 \newcommand{\comm}[1]{\textcolor{red}{[#1]}}
 
-% Set font to Arial (Helvetica)
-\renewcommand{\familydefault}{\sfdefault}
+% % Set font to Arial (Helvetica)
+% \renewcommand{\familydefault}{\sfdefault}
 
 % Change section numbering to A, B, C, etc. and make titles uppercase
 \renewcommand{\thesection}{\Alph{section}.}
@@ -64,6 +77,7 @@
 \date{\today}
 
 \begin{document}
+\pagestyle{empty}
 
 \maketitle
 
@@ -78,7 +92,14 @@
 \input{sec/appendix.tex}
 
 \clearpage
+% Keep bibliography URLs visible but non-clickable.
+\begingroup
+\let\url\nolinkurl
+\makeatletter
+\let\href\@secondoftwo
+\makeatother
 \bibliographystyle{unsrtnat}
 \bibliography{references}
+\endgroup
 
 \end{document}
