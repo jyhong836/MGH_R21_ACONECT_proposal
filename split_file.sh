@@ -14,7 +14,6 @@ declare -A pages=(
   ["9"]="project_abstract_v${VER}.pdf"
   ["10"]="project_narrative_v${VER}.pdf"
   ["11"]="resource_sharing_plan_v${VER}.pdf"
-  ["12"]="DMS_plan_v${VER}.pdf"
   ["14"]="inclusion_lifespan_v${VER}.pdf"
   ["15"]="inclusion_women_race_v${VER}.pdf"
   ["16"]="recruitment_retention_plan_v${VER}.pdf"
@@ -24,6 +23,8 @@ declare -A pages=(
   ["21"]="team_v${VER}.pdf"
   ["22-"]="references_v${VER}.pdf"
 )
+# Removed. The format is wrong.
+# ["12"]="DMS_plan_v${VER}.pdf"
 
 for pagelist in "${(@k)pages}"; do
   gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER \
